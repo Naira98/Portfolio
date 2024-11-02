@@ -18,8 +18,8 @@ const Hero = () => {
         <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
       </div>
 
-      <div className="dark:bg-black-100 dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2] absolute left-0 top-0 flex h-screen w-full items-center justify-center bg-white">
-        <div className="dark:bg-black-100 pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+      <div className="bg-black-100 bg-grid-white/[0.03] absolute left-0 top-0 flex h-screen w-full items-center justify-center">
+        <div className="bg-black-100 pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
         <div className="relative z-10 my-20 flex justify-center">
           <div className="ms:max-w-2xl flex max-w-[89vw] flex-col items-center justify-center lg:max-w-[60vw]">
             <h2 className="max-w-80 text-center text-xs uppercase tracking-widest text-blue-100">
@@ -34,7 +34,11 @@ const Hero = () => {
             <div className="mb-4 text-center text-sm md:text-lg md:tracking-wider lg:text-2xl">
               Hi, I&apos;m Naira, a Full Stack Developer
             </div>
-            <MagicButton title="Show My Work" position="right" icon={<FaLocationArrow />}/>
+            <MagicButton
+              title="Show My Work"
+              position="right"
+              icon={<FaLocationArrow />}
+            />
           </div>
         </div>
       </div>
