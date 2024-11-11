@@ -2,7 +2,7 @@
 
 import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
 import GridItem from "../GridItem";
-import Lottie from "react-lottie";
+import Lottie, { Options as LottieOptions } from "react-lottie";
 import { useState } from "react";
 import animationData from "@/data/confetti.json";
 import MagicButton from "@/components/ui/MagicButton";
@@ -12,7 +12,7 @@ import { IoCopyOutline } from "react-icons/io5";
 const CopyMail = () => {
   const [copied, setCopied] = useState(false);
 
-  const defaultOptions = {
+  const defaultOptions: LottieOptions = {
     loop: copied,
     autoplay: copied,
     animationData: animationData,
@@ -29,14 +29,14 @@ const CopyMail = () => {
     <GridItem className="flex items-center justify-center md:col-span-3 md:row-span-1 lg:col-span-2">
       <div className="flex h-full items-center justify-center">
         <BackgroundGradientAnimation />
-        <div className="relative flex min-h-40 w-full flex-col items-center justify-center p-5 text-center md:h-full md:max-w-full lg:p-10">
+        <div className="relative flex min-h-40 w-full flex-col items-center justify-center text-balance p-5 text-center md:h-full md:max-w-full lg:p-10">
           <div className="z-10 font-sans text-lg font-bold lg:text-xl">
             Do you want to start a project together?
           </div>
 
           <div className="mt-4 min-w-full">
-            <div className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
-              <Lottie options={defaultOptions} height={100} width={200} />
+            <div className="pointer-events-none absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+              <Lottie options={defaultOptions} height={200} width={400} />
             </div>
 
             <MagicButton

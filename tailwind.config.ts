@@ -19,9 +19,9 @@ const config = {
   prefix: "",
   theme: {
     screens: {
-      'sm': '640px',
-      'md': '769px',
-      'lg': '1080px',
+      sm: "640px",
+      md: "890px",
+      lg: "1300px",
     },
     container: {
       center: true,

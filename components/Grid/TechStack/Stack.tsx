@@ -13,7 +13,7 @@ const Stack = ({ stack, position }: Props) => {
       {stack.map((item: string, i: number) => (
         <span
           key={i}
-          className="rounded-lg bg-[#10132E] px-3 py-2 text-center text-xs opacity-50 lg:px-3 lg:py-4 lg:text-sm"
+          className="rounded-lg bg-[#10132E] px-3 py-2 text-center text-xs opacity-50"
         >
           {item}
         </span>
@@ -25,7 +25,7 @@ const Stack = ({ stack, position }: Props) => {
 
 function EmptyCard() {
   return (
-    <span className="rounded-lg bg-[#10132E] px-3 py-4 text-center lg:px-3 lg:py-4"></span>
+    <span className="rounded-lg bg-[#10132E] px-3 py-4 text-center"></span>
   );
 }
 
