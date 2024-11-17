@@ -24,7 +24,7 @@ const TechPassion = () => {
       </div>
 
       <div className="relative flex min-h-40 flex-col items-center justify-start text-balance p-5 transition duration-200 group-hover/bento:translate-x-2 md:h-full lg:px-10">
-        <div className="z-10 font-sans text-lg font-bold lg:text-xl">
+        <div className="font-sans text-lg font-bold lg:text-xl">
           Tech enthusiast with a passion for development
         </div>
       </div>

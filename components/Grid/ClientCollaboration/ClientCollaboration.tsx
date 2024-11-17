@@ -15,7 +15,7 @@ const ClientCollaboration = () => {
       </div>
 
       <div className="relative flex min-h-40 flex-col items-center justify-end text-balance p-5 transition duration-200 group-hover/bento:translate-x-2 md:h-full lg:p-10">
-        <div className="z-10 max-w-96 font-sans text-lg font-bold lg:text-xl">
+        <div className="max-w-96 font-sans text-lg font-bold lg:text-xl">
           I prioritize client collaboration, fostering open communication
         </div>
       </div>

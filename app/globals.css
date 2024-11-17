@@ -6,7 +6,7 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
-    
+
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
 
@@ -68,7 +68,7 @@
 
 @layer base {
   * {
-    @apply border-border !scroll-smooth;
+    @apply !scroll-smooth border-border;
   }
   body {
     @apply bg-background text-foreground;
@@ -78,12 +78,35 @@
   }
 }
 
+::selection {
+  background: #975bf2;
+}
+
 @layer utilities {
   .heading {
-    @apply text-center text-4xl font-bold md:text-5xl;
+    @apply text-center text-4xl font-bold lg:text-5xl;
+  }
+  .rotated-image {
+    transform: rotate(5deg) scale(1) translateY(60px);
+    transition: transform 0.5s;
+  }
+  .rotated-image-container:hover .rotated-image {
+    transform: translateY(20px);
   }
 
   .black-gradient {
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
+  }
+  .tooltip-text {
+    right: 50%;
+    transform: translateX(50%) translateY(100%) scale(0);
+    transition:
+      transform 0.3s,
+      opacity 0.5s;
+    opacity: 0;
+  }
+  .tooltip:hover .tooltip-text {
+    transform: translateX(50%);
+    opacity: 100;
   }
 }

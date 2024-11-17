@@ -10,7 +10,7 @@ const InnovativeSolutions = () => {
           height={300}
           src="/b5.svg"
           alt="code"
-          className="w-60object-cover absolute bottom-0 right-0 object-center md:w-96"
+          className="absolute bottom-0 right-0 w-60 object-cover object-center md:w-96"
         />
       </div>
       <div className="absolute -bottom-5 right-0 w-full opacity-80">
@@ -23,7 +23,7 @@ const InnovativeSolutions = () => {
         />
       </div>
       <div className="relative flex min-h-40 flex-col items-center justify-start text-balance p-5 transition duration-200 group-hover/bento:translate-x-2 lg:p-10">
-        <div className="z-10 font-sans text-lg font-bold max-md:max-w-96 lg:text-xl">
+        <div className="font-sans text-lg font-bold max-md:max-w-96 lg:text-xl">
           Innovative Problem Solving for Web Excellence
         </div>
       </div>

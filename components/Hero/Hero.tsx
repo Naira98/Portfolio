@@ -25,7 +25,7 @@ const Hero = () => {
         {/* Radial gradient for the container to give a faded look */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black-100" />
 
-        <div className="relative z-10 my-20 flex max-w-[89vw] flex-col items-center justify-center md:max-w-[70vw] lg:max-w-[60vw]">
+        <div className="relative my-20 flex max-w-[89vw] flex-col items-center justify-center md:max-w-[70vw] lg:max-w-[60vw]">
           <h2 className="text-center text-xs uppercase tracking-widest text-blue-100 md:text-sm">
             Dynamic Web Magic with Creativity
           </h2>

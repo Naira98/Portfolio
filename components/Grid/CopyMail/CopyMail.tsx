@@ -22,6 +22,7 @@ const CopyMail = () => {
   };
 
   const handleCopy = () => {
+    console.log("copy");
     navigator.clipboard.writeText("nairamm99@gmail.com");
     setCopied(true);
   };
@@ -30,13 +31,18 @@ const CopyMail = () => {
       <div className="flex h-full items-center justify-center">
         <BackgroundGradientAnimation />
         <div className="relative flex min-h-40 w-full flex-col items-center justify-center text-balance p-5 text-center md:h-full md:max-w-full lg:p-10">
-          <div className="z-10 font-sans text-lg font-bold lg:text-xl">
+          <div className="font-sans text-lg font-bold lg:text-xl">
             Do you want to start a project together?
           </div>
 
           <div className="mt-4 min-w-full">
             <div className="pointer-events-none absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
-              <Lottie options={defaultOptions} height={200} width={400} />
+              <Lottie
+                options={defaultOptions}
+                height={200}
+                width={400}
+                isClickToPauseDisabled={true}
+              />
             </div>
 
             <MagicButton
