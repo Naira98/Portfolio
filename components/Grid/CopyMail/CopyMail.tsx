@@ -37,12 +37,7 @@ const CopyMail = () => {
 
           <div className="mt-4 min-w-full">
             <div className="pointer-events-none absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
-              <Lottie
-                options={defaultOptions}
-                height={200}
-                width={400}
-                isClickToPauseDisabled={true}
-              />
+              <Lottie options={defaultOptions} height={200} width={400} />
             </div>
 
             <MagicButton
