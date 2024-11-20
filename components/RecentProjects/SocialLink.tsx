@@ -6,7 +6,6 @@ import VideoIcon from "./VideoIcon";
 import { ProjectType } from "@/data/types";
 
 const SocialLinks = ({ project }: { project: ProjectType }) => {
-  console.log(project);
   return (
     <div className="flex items-center justify-center gap-2">
       {project.github && (
@@ -20,11 +19,7 @@ const SocialLinks = ({ project }: { project: ProjectType }) => {
         </LinkIcon>
       )}
       {project.video && (
-        <VideoIcon
-          title="Video"
-          src={project.video}
-          projectDes={{ title: project.title, des: project.des }}
-        >
+        <VideoIcon title="Video" projectId={project.id}>
           <FaVideo size={24} />
         </VideoIcon>
       )}

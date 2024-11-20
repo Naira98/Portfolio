@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { navItems } from "@/data";
-import { useActiveSection } from "@/context/AcitveSection";
+import { useActiveSection } from "@/context/ActiveSectionContext";
 import clsx from "clsx";
 
 export const SquigglyUnderline = ({

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
-import AcitveSectionProvider from "@/context/AcitveSection";
+import ActiveSectionProvider from "@/context/ActiveSectionContext";
+import OpenProjectContextProvider from "@/context/OpenProjectContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +27,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AcitveSectionProvider>{children}</AcitveSectionProvider>
+          <ActiveSectionProvider>
+            <OpenProjectContextProvider>{children}</OpenProjectContextProvider>
+          </ActiveSectionProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -5,7 +5,7 @@ import GridBackground from "./GridBackground";
 import MagicButton from "../ui/MagicButton";
 import { Spotlight } from "./Spotlight";
 import { TextGenerateEffect } from "./TextGenerateEffect";
-import { useActiveSection } from "@/context/AcitveSection";
+import { useActiveSection } from "@/context/ActiveSectionContext";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { useRouter } from "next/navigation";

@@ -1,16 +1,17 @@
 "use client";
 
-import Image from "next/image";
+import { useEffect } from "react";
 import { projects } from "@/data/index";
 import { AnimatedTooltip } from "./AnimatedTooltip";
 import SocialLinks from "./SocialLink";
-import { useActiveSection } from "@/context/AcitveSection";
-import { useEffect } from "react";
+import { useActiveSection } from "@/context/ActiveSectionContext";
 import { useInView } from "react-intersection-observer";
 import ProjectDescription from "./ProjectDescription";
 import ProjectImage from "./ProjectImage";
+import { useOpenProject } from "@/context/OpenProjectContext";
 
 const RecentProjects = () => {
+  const { setOpenProjectId } = useOpenProject();
   const { setActiveSection, timeOfLastClick } = useActiveSection();
   const { ref, inView } = useInView({ threshold: 0.4 });
 
@@ -39,7 +40,12 @@ const RecentProjects = () => {
             className="rotated-image-container relative flex h-min w-fit flex-col flex-nowrap content-center items-center justify-center gap-10 rounded-2xl border bg-white/20 decoration-clone p-px transition duration-500 hover:bg-purple"
           >
             {/* Single Project */}
-            <div className="flex h-[25rem] w-auto flex-col items-center justify-between rounded-[inherit] bg-black-100 p-4 text-white">
+            <div
+              className="flex h-[25rem] w-auto cursor-pointer flex-col items-center justify-between rounded-[inherit] bg-black-100 p-4 text-white"
+              onClick={() => {
+                setOpenProjectId(project.id);
+              }}
+            >
               <ProjectImage img={project.img} title={project.title} />
 
               <ProjectDescription title={project.title} des={project.des} />

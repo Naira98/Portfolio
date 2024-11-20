@@ -41,7 +41,7 @@ const SideNav = ({ active }: SideNavPropsType) => {
       variants={containerVariants}
       animate={containerControls}
       initial="close"
-      className={`absolute right-0 top-0 h-screen w-[40%] border border-l-[1px] border-white/20 bg-black opacity-90 ${!active && "border-none"}`}
+      className={`absolute right-0 top-0 h-screen w-[40%] border-l-[1px] border-white/20 bg-black opacity-90 ${!active && "border-none"}`}
     >
       <div className="px-10 py-20">
         <SquigglyUnderline sideNav={true} />

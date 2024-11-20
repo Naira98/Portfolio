@@ -5,7 +5,7 @@ import { createContext, ReactNode, useContext, useState } from "react";
 
 type SectionName = (typeof navItems)[number]["name"];
 
-type AcitveSectionProviderProps = { children: ReactNode };
+type ActiveSectionProviderProps = { children: ReactNode };
 
 type ActiveSectionContextType = {
   activeSection: SectionName;
@@ -18,7 +18,7 @@ const ActiveSectionContext = createContext<ActiveSectionContextType | null>(
   null,
 );
 
-const AcitveSectionProvider = ({ children }: AcitveSectionProviderProps) => {
+const ActiveSectionProvider = ({ children }: ActiveSectionProviderProps) => {
   const [activeSection, setActiveSection] = useState<SectionName>("Home");
   const [timeOfLastClick, setTimeOfLastClick] = useState(0);
   return (
@@ -42,4 +42,4 @@ export const useActiveSection = () => {
   return context;
 };
 
-export default AcitveSectionProvider;
+export default ActiveSectionProvider;

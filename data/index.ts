@@ -11,7 +11,7 @@ export const navItems = [
 
 export const projects: ProjectType[] = [
   {
-    id: 1,
+    id: 0,
     title: "The World Oasis “Customer Facing”",
     des: "Airbnb clone. Customer facing website to discover cabins with an intuitive calendar that displays available dates allowing guests to book their stay.",
     iconLists: [
@@ -48,7 +48,7 @@ export const projects: ProjectType[] = [
       "/projects/TheWildOasisCustomerFacing/TheWildOasisCustomerFacing.mov",
   },
   {
-    id: 2,
+    id: 1,
     title: "The World Oasis “Employee Dashboard”",
     des: "The hotel's internal website offers a dashboard where staff monitor hotel statistics, track bookings, manage check-ins and check-outs with ease",
     iconLists: [
@@ -89,7 +89,7 @@ export const projects: ProjectType[] = [
     video: "/projects/TheWildOasisHotelEmployee/TheWildOasisHotelEmployee.mov",
   },
   {
-    id: 3,
+    id: 2,
     title: "Social Media",
     des: "Full stack online platform allows users to create, share content and  connect with friends. With support of dark mode and responsive design.",
     iconLists: [
@@ -160,7 +160,7 @@ export const projects: ProjectType[] = [
     video: "/projects/SocialMedia/Social Media.mp4",
   },
   {
-    id: 4,
+    id: 3,
     title: "E-commerce",
     des: "Full stack online shop with an admin panel for sellers to showcase their products and a storefront for clients to browse and purchase products.",
     iconLists: [

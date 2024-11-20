@@ -6,7 +6,7 @@ import TeckStack from "./TechStack/TechStack";
 import TechPassion from "./TechPassion/TechPassion";
 import CopyMail from "./CopyMail/CopyMail";
 import InnovativeSolutions from "./InnovativeSolutions/InnovativeSolutions";
-import { useActiveSection } from "@/context/AcitveSection";
+import { useActiveSection } from "@/context/ActiveSectionContext";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
