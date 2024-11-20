@@ -1,24 +1,16 @@
 "use client";
 
-import { useEffect } from "react";
 import { projects } from "@/data/index";
 import { AnimatedTooltip } from "./AnimatedTooltip";
 import SocialLinks from "./SocialLink";
-import { useActiveSection } from "@/context/ActiveSectionContext";
-import { useInView } from "react-intersection-observer";
 import ProjectDescription from "./ProjectDescription";
 import ProjectImage from "./ProjectImage";
 import { useOpenProject } from "@/context/OpenProjectContext";
+import useSectionInView from "@/hooks/useSectionInView";
 
 const RecentProjects = () => {
   const { setOpenProjectId } = useOpenProject();
-  const { setActiveSection, timeOfLastClick } = useActiveSection();
-  const { ref, inView } = useInView({ threshold: 0.4 });
-
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000)
-      setActiveSection("Projects");
-  }, [inView, timeOfLastClick, setActiveSection]);
+  const { ref } = useSectionInView("Projects", 0.4);
 
   return (
     <div

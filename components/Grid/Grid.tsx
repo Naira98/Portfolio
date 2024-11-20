@@ -6,18 +6,10 @@ import TeckStack from "./TechStack/TechStack";
 import TechPassion from "./TechPassion/TechPassion";
 import CopyMail from "./CopyMail/CopyMail";
 import InnovativeSolutions from "./InnovativeSolutions/InnovativeSolutions";
-import { useActiveSection } from "@/context/ActiveSectionContext";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import useSectionInView from "@/hooks/useSectionInView";
 
 const Grid = () => {
-  const { setActiveSection, timeOfLastClick } = useActiveSection();
-  const { ref, inView } = useInView({ threshold: 0.5 });
-
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000)
-      setActiveSection("About");
-  }, [inView, timeOfLastClick, setActiveSection]);
+  const { ref } = useSectionInView("About");
   return (
     <section
       ref={ref}

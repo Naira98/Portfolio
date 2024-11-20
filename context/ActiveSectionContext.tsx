@@ -1,15 +1,12 @@
 "use client";
 
-import { navItems } from "@/data";
 import { createContext, ReactNode, useContext, useState } from "react";
-
-type SectionName = (typeof navItems)[number]["name"];
 
 type ActiveSectionProviderProps = { children: ReactNode };
 
 type ActiveSectionContextType = {
-  activeSection: SectionName;
-  setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
+  activeSection: string;
+  setActiveSection: React.Dispatch<React.SetStateAction<string>>;
   timeOfLastClick: number;
   setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
 };
@@ -19,7 +16,7 @@ const ActiveSectionContext = createContext<ActiveSectionContextType | null>(
 );
 
 const ActiveSectionProvider = ({ children }: ActiveSectionProviderProps) => {
-  const [activeSection, setActiveSection] = useState<SectionName>("Home");
+  const [activeSection, setActiveSection] = useState<string>("Home");
   const [timeOfLastClick, setTimeOfLastClick] = useState(0);
   return (
     <ActiveSectionContext.Provider

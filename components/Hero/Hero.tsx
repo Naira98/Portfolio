@@ -5,20 +5,13 @@ import GridBackground from "./GridBackground";
 import MagicButton from "../ui/MagicButton";
 import { Spotlight } from "./Spotlight";
 import { TextGenerateEffect } from "./TextGenerateEffect";
-import { useActiveSection } from "@/context/ActiveSectionContext";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 import { useRouter } from "next/navigation";
+import useSectionInView from "@/hooks/useSectionInView";
 
 const Hero = () => {
-  const { setActiveSection, timeOfLastClick, setTimeOfLastClick } =
-    useActiveSection();
-  const { ref, inView } = useInView({ threshold: 0.5 });
   const router = useRouter();
-
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) setActiveSection("Home");
-  }, [inView, timeOfLastClick, setActiveSection]);
+  const { ref, setTimeOfLastClick, setActiveSection } =
+    useSectionInView("Home");
 
   return (
     <div ref={ref} id="home" className="relative h-[38rem] pb-20 pt-36">
