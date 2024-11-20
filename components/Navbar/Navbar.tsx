@@ -25,7 +25,7 @@ const Navbar = () => {
       className={clsx(
         "fixed flex h-20 w-full transform items-center justify-between bg-gradient-to-b from-black-100 to-transparent px-6 duration-300 md:px-14",
         {
-          "bg-black-100 opacity-90": isScrolled,
+          "bg-black opacity-90": isScrolled,
         },
       )}
     >

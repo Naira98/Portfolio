@@ -18,7 +18,7 @@ const HamburgerButton = () => {
           initial={false}
           animate={active ? "open" : "closed"}
           onClick={() => setActive((pv) => !pv)}
-          className="relative z-10 h-14 w-14 transform rounded-full transition-colors duration-300 hover:bg-purple"
+          className="relative z-10 h-14 w-14 transform rounded-full transition-colors duration-300"
         >
           <motion.span
             variants={VARIANTS.top}
@@ -42,7 +42,7 @@ const HamburgerButton = () => {
           />
         </motion.button>
       </MotionConfig>
-      <SideNav active={active} setActive={setActive} />
+      <SideNav active={active} />
     </>
   );
 };

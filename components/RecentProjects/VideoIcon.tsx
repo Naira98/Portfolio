@@ -3,27 +3,38 @@
 import { ReactNode, useState } from "react";
 import Modal from "./Modal";
 
+interface VideoIconPropsType {
+  children: ReactNode;
+  title: string;
+  src: string;
+  projectDes: {
+    title: string;
+    des: string;
+  };
+}
+
 const VideoIcon = ({
   children,
   title,
   src,
-}: {
-  children: ReactNode;
-  title: string;
-  src: string;
-}) => {
+  projectDes,
+}: VideoIconPropsType) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <span className="tooltip relative h-[24px]">
-      <div
+      <button
         onClick={() => setIsOpen(true)}
         className="text-white hover:text-purple"
       >
         {children}
-      </div>
-      <Modal isOpen={isOpen} setIsOpen={setIsOpen} src={src} />
-      {/* <Modal isOpen={isOpen} setIsOpen={setIsOpen} src={src} /> */}
+      </button>
+      <Modal
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        src={src}
+        projectDes={projectDes}
+      />
 
       <div className="tooltip-text absolute bottom-[130%] z-20 w-fit rounded-2xl border border-white/20 bg-black px-3 py-1 text-sm font-bold text-white">
         {title}

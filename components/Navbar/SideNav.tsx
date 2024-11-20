@@ -1,12 +1,11 @@
 "use client";
 
 import { motion, useAnimationControls } from "framer-motion";
-import { Dispatch, SetStateAction, useEffect } from "react";
+import { useEffect } from "react";
 import { SquigglyUnderline } from "./SquigglyUnderline";
 
 interface SideNavPropsType {
   active: boolean;
-  setActive: Dispatch<SetStateAction<boolean>>;
 }
 
 const containerVariants = {
@@ -14,21 +13,21 @@ const containerVariants = {
     width: "0%",
     transition: {
       type: "spring",
-      damping: 30,
-      duration: 0.5,
+      stiffness: 300,
+      damping: 20,
     },
   },
   open: {
     width: "40%",
     transition: {
       type: "spring",
-      damping: 30,
-      duration: 0.5,
+      stiffness: 300,
+      damping: 20,
     },
   },
 };
 
-const SideNav = ({ active, setActive }: SideNavPropsType) => {
+const SideNav = ({ active }: SideNavPropsType) => {
   const containerControls = useAnimationControls();
   useEffect(() => {
     if (active) {
@@ -42,7 +41,7 @@ const SideNav = ({ active, setActive }: SideNavPropsType) => {
       variants={containerVariants}
       animate={containerControls}
       initial="close"
-      className="absolute right-0 top-0 h-screen w-[40%] bg-black-100 opacity-90"
+      className={`absolute right-0 top-0 h-screen w-[40%] border border-l-[1px] border-white/20 bg-black opacity-90 ${!active && "border-none"}`}
     >
       <div className="px-10 py-20">
         <SquigglyUnderline sideNav={true} />

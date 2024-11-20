@@ -1,3 +1,5 @@
+import { ProjectType } from "./types";
+
 export const navItems = [
   { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
@@ -7,7 +9,7 @@ export const navItems = [
   { name: "Contact", link: "#contact" },
 ];
 
-export const projects = [
+export const projects: ProjectType[] = [
   {
     id: 1,
     title: "The World Oasis “Customer Facing”",

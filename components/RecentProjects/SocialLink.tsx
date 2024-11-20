@@ -3,30 +3,28 @@ import { ReactNode } from "react";
 import { FaGithub, FaVideo } from "react-icons/fa";
 import { BsGlobe2 } from "react-icons/bs";
 import VideoIcon from "./VideoIcon";
+import { ProjectType } from "@/data/types";
 
-const SocialLinks = ({
-  github,
-  website,
-  video,
-}: {
-  github?: string;
-  website?: string;
-  video?: string;
-}) => {
+const SocialLinks = ({ project }: { project: ProjectType }) => {
+  console.log(project);
   return (
     <div className="flex items-center justify-center gap-2">
-      {github && (
-        <LinkIcon title="Github" href={github}>
+      {project.github && (
+        <LinkIcon title="Github" href={project.github}>
           <FaGithub size={24} />
         </LinkIcon>
       )}
-      {website && (
-        <LinkIcon title="Website" href={website}>
+      {project.website && (
+        <LinkIcon title="Website" href={project.website}>
           <BsGlobe2 size={24} />
         </LinkIcon>
       )}
-      {video && (
-        <VideoIcon title="Video" src={video} >
+      {project.video && (
+        <VideoIcon
+          title="Video"
+          src={project.video}
+          projectDes={{ title: project.title, des: project.des }}
+        >
           <FaVideo size={24} />
         </VideoIcon>
       )}
@@ -59,7 +57,5 @@ const LinkIcon = ({
     </span>
   );
 };
-
-
 
 export default SocialLinks;
