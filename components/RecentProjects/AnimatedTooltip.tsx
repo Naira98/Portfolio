@@ -80,7 +80,7 @@ export const AnimatedTooltip = ({
             onMouseMove={handleMouseMove}
             height={100}
             width={100}
-            src={item.image}
+            src={`/tech/${item.image}`}
             alt={item.name}
             className="relative !m-0 h-9 w-9 rounded-full border border-white/[0.2] bg-black-100 object-cover object-top p-1 transition duration-500 group-hover:z-30 group-hover:scale-105"
           />

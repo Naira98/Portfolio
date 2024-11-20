@@ -12,3 +12,8 @@ export interface ProjectType {
   website?: string;
   video: string;
 }
+
+export interface SkillType {
+  name: string;
+  img: string;
+}

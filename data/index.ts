@@ -1,4 +1,4 @@
-import { ProjectType } from "./types";
+import { ProjectType, SkillType } from "./types";
 
 export const navItems = [
   { name: "Home", link: "#home" },
@@ -17,28 +17,28 @@ export const projects: ProjectType[] = [
     iconLists: [
       {
         id: 1,
-        name: "Typescript",
-        image: "/tech/typescript.svg",
+        name: "TypeScript",
+        image: "typescript.svg",
       },
       {
         id: 2,
         name: "Next.js",
-        image: "/tech/next.svg",
+        image: "next.svg",
       },
       {
         id: 3,
         name: "Tailwind CSS",
-        image: "/tech/tailwind.png",
+        image: "tailwind.png",
       },
       {
         id: 4,
         name: "OAuth",
-        image: "/tech/auth-js.png",
+        image: "auth-js.png",
       },
       {
         id: 5,
         name: "Supabase",
-        image: "/tech/supabase.svg",
+        image: "supabase.svg",
       },
     ],
     img: "/projects/TheWildOasisCustomerFacing/image.png",
@@ -54,33 +54,33 @@ export const projects: ProjectType[] = [
     iconLists: [
       {
         id: 1,
-        name: "Typescript",
-        image: "/tech/typescript.svg",
+        name: "TypeScript",
+        image: "typescript.svg",
       },
       {
         id: 2,
         name: "React",
-        image: "/tech/react.png",
+        image: "react.webp",
       },
       {
         id: 3,
         name: "Styled Components",
-        image: "/tech/styled-components.png",
+        image: "styled-components.png",
       },
       {
         id: 4,
         name: "Supabase",
-        image: "/tech/supabase.svg",
+        image: "supabase.svg",
       },
       {
         id: 5,
         name: "React Router",
-        image: "/tech/react-router.png",
+        image: "react-router.png",
       },
       {
         id: 6,
         name: "React Query",
-        image: "/tech/react-query.png",
+        image: "react-query.png",
       },
     ],
     img: "/projects/TheWildOasisHotelEmployee/image.png",
@@ -95,63 +95,63 @@ export const projects: ProjectType[] = [
     iconLists: [
       {
         id: 1,
-        name: "Typescript",
-        image: "/tech/typescript.svg",
+        name: "TypeScript",
+        image: "typescript.svg",
       },
       {
         id: 2,
         name: "React",
-        image: "/tech/react.png",
+        image: "react.webp",
       },
       {
         id: 3,
         name: "React Query",
-        image: "/tech/react-query.png",
+        image: "react-query.png",
       },
       {
         id: 4,
         name: "React Router",
-        image: "/tech/react-router.png",
+        image: "react-router.png",
       },
       {
         id: 5,
         name: "Node.js",
-        image: "/tech/node.png",
+        image: "node.png",
       },
       {
         id: 6,
         name: "Express",
-        image: "/tech/express.png",
+        image: "express.png",
       },
       {
         id: 7,
         name: "MongoDB",
-        image: "/tech/MongoDB.png",
+        image: "mongoDB.png",
       },
       {
         id: 8,
         name: "JWT",
-        image: "/tech/jwt.png",
+        image: "jwt.png",
       },
       {
         id: 9,
         name: "Joi",
-        image: "/tech/Joi.png",
+        image: "Joi-white.png",
       },
       {
         id: 10,
         name: "Jest",
-        image: "/tech/jest.webp",
+        image: "jest.webp",
       },
       {
         id: 11,
         name: "Docker",
-        image: "/tech/docker.webp",
+        image: "docker.webp",
       },
       {
         id: 12,
         name: "Docker compose",
-        image: "/tech/docker-compose.webp",
+        image: "docker-compose.webp",
       },
     ],
     img: "/projects/SocialMedia/image.png",
@@ -167,36 +167,73 @@ export const projects: ProjectType[] = [
       {
         id: 1,
         name: "Node.js",
-        image: "/tech/node.png",
+        image: "node.png",
       },
       {
         id: 2,
         name: "Express",
-        image: "/tech/express.png",
+        image: "express.png",
       },
       {
         id: 3,
         name: "MongoDB",
-        image: "/tech/MongoDB.png",
+        image: "mongoDB.png",
       },
       {
         id: 4,
         name: "Express Validator",
-        image: "/tech/express-vaildator.svg",
+        image: "express-validator.svg",
       },
       {
         id: 5,
         name: ".ejs",
-        image: "/tech/ejs.jpeg",
+        image: "ejs.jpeg",
       },
       {
         id: 6,
         name: "Stripe",
-        image: "/tech/stripe.jpeg",
+        image: "stripe.jpeg",
       },
     ],
     img: "/projects/E-Commerce/image.png",
     github: "https://github.com/Naira98/E-commerce",
     video: "/projects/E-Commerce/E-Commerce.mov",
   },
+];
+
+export const skillGroups: SkillType[][] = [
+  [
+    { name: "HTML", img: "html.png" },
+    { name: "CSS", img: "css.svg" },
+    { name: "JavaScript", img: "javascript.png" },
+    { name: "TypeScript", img: "typescript.svg" },
+  ],
+
+  [
+    { name: "React.js", img: "react.webp" },
+    { name: "Next.js", img: "next.svg" },
+    { name: "Tailwind CSS", img: "tailwind.png" },
+    { name: "React Query", img: "react-query.png" },
+  ],
+
+  [
+    { name: "Node.js", img: "node.png" },
+    { name: "Express", img: "express.png" },
+    { name: "Docker", img: "docker.webp" },
+    { name: "Git", img: "git.png" },
+  ],
+
+  [
+    { name: "MongoDB", img: "mongoDB.png" },
+    { name: "PostgreSQL", img: "PostgreSQL.png" },
+    { name: "Redis", img: "redis.png" },
+    { name: "JWT", img: "jwt.png" },
+  ],
+
+  [
+    { name: "Zod", img: "zod.png" },
+    { name: "Joi", img: "joi-transparent.png" },
+    { name: "Jest.js", img: "jest.webp" },
+    { name: "Formik", img: "formik.png" },
+  ],
 ];

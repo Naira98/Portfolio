@@ -2,6 +2,7 @@ import Grid from "@/components/Grid/Grid";
 import Hero from "@/components/Hero/Hero";
 import RecentProjects from "@/components/RecentProjects/RecentProjects";
 import Navbar from "@/components/Navbar/Navbar";
+import Skills from "@/components/Skills/Skills";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Grid />
       <RecentProjects />
+      <Skills />
     </main>
   );
 }

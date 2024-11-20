@@ -45,7 +45,7 @@ const RecentProjects = () => {
               <div className="mt-3 flex w-full items-center justify-between">
                 <div className="flex">
                   {/* Social Meida project */}
-                  {project.id === 3 ? (
+                  {project.id === 2 ? (
                     <>
                       <AnimatedTooltip items={project.iconLists.slice(0, 3)} />
                       <div className="lg:w-4" />
