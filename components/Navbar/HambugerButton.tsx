@@ -2,44 +2,48 @@
 
 import { useState } from "react";
 import { MotionConfig, motion } from "framer-motion";
+import SideNav from "./SideNav";
 
 const HamburgerButton = () => {
   const [active, setActive] = useState(false);
   return (
-    <MotionConfig
-      transition={{
-        duration: 0.5,
-        ease: "easeInOut",
-      }}
-    >
-      <motion.button
-        initial={false}
-        animate={active ? "open" : "closed"}
-        onClick={() => setActive((pv) => !pv)}
-        className="relative h-14 w-14 transform rounded-3xl transition-colors duration-300 hover:bg-white/20"
+    <>
+      <MotionConfig
+        transition={{
+          duration: 0.5,
+          ease: "easeInOut",
+        }}
       >
-        <motion.span
-          variants={VARIANTS.top}
-          className="absolute h-1 w-10 bg-white"
-          style={{ y: "-50%", left: "50%", x: "-50%", top: "35%" }}
-        />
-        <motion.span
-          variants={VARIANTS.middle}
-          className="absolute h-1 w-10 bg-white"
-          style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }}
-        />
-        <motion.span
-          variants={VARIANTS.bottom}
-          className="absolute h-1 w-5 bg-white"
-          style={{
-            x: "-50%",
-            y: "50%",
-            bottom: "35%",
-            left: "calc(50% + 10px)",
-          }}
-        />
-      </motion.button>
-    </MotionConfig>
+        <motion.button
+          initial={false}
+          animate={active ? "open" : "closed"}
+          onClick={() => setActive((pv) => !pv)}
+          className="relative z-10 h-14 w-14 transform rounded-full transition-colors duration-300 hover:bg-purple"
+        >
+          <motion.span
+            variants={VARIANTS.top}
+            className="absolute h-1 w-10 bg-white"
+            style={{ y: "-50%", left: "50%", x: "-50%", top: "35%" }}
+          />
+          <motion.span
+            variants={VARIANTS.middle}
+            className="absolute h-1 w-10 bg-white"
+            style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }}
+          />
+          <motion.span
+            variants={VARIANTS.bottom}
+            className="absolute h-1 w-5 bg-white"
+            style={{
+              x: "-50%",
+              y: "50%",
+              bottom: "35%",
+              left: "calc(50% + 10px)",
+            }}
+          />
+        </motion.button>
+      </MotionConfig>
+      <SideNav active={active} setActive={setActive} />
+    </>
   );
 };
 

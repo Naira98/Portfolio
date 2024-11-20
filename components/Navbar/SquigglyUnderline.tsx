@@ -4,12 +4,17 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { navItems } from "@/data";
 import { useActiveSection } from "@/context/AcitveSection";
+import clsx from "clsx";
 
-export const SquigglyUnderline = () => {
+export const SquigglyUnderline = ({
+  sideNav = false,
+}: {
+  sideNav?: boolean;
+}) => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSection();
   return (
-    <div className="flex gap-8 lg:gap-16">
+    <div className={clsx("flex gap-8 lg:gap-16", { "flex-col": sideNav })}>
       {navItems.map((item) => {
         const isSelected = item.name === activeSection;
         return (
