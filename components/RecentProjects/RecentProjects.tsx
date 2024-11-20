@@ -1,11 +1,28 @@
+"use client";
+
 import Image from "next/image";
 import { projects } from "@/data/index";
 import { AnimatedTooltip } from "./AnimatedTooltip";
 import SocialLinks from "./SocialLink";
+import { useActiveSection } from "@/context/AcitveSection";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 const RecentProjects = () => {
+  const { setActiveSection, timeOfLastClick } = useActiveSection();
+  const { ref, inView } = useInView({ threshold: 0.4 });
+
+  useEffect(() => {
+    if (inView && Date.now() - timeOfLastClick > 1000)
+      setActiveSection("Projects");
+  }, [inView, timeOfLastClick, setActiveSection]);
+
   return (
-    <div className="md:px-15 mt-20 px-12 lg:px-32">
+    <div
+      ref={ref}
+      id="projects"
+      className="md:px-15 mt-20 scroll-mt-28 px-12 lg:px-32"
+    >
       <h1 className="heading mb-5 text-balance">
         A small selection&nbsp;of{" "}
         <span className="text-purple">recent projects</span>

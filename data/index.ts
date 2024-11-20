@@ -1,7 +1,9 @@
 export const navItems = [
+  { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Skills", link: "#skills" },
+  { name: "Approach", link: "#approach" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -40,7 +42,8 @@ export const projects = [
     img: "/projects/TheWildOasisCustomerFacing/image.png",
     github: "https://github.com/Naira98/TheWildOasis-CustomerFacing",
     website: "https://the-wild-oasis-website-plum-pi.vercel.app/",
-    video: "/projects/TheWildOasisCustomerFacing/TheWildOasisCustomerFacing.mov",
+    video:
+      "/projects/TheWildOasisCustomerFacing/TheWildOasisCustomerFacing.mov",
   },
   {
     id: 2,
