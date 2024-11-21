@@ -126,7 +126,7 @@ export const projects: ProjectType[] = [
       {
         id: 7,
         name: "MongoDB",
-        image: "mongoDB.png",
+        image: "mongodb.png",
       },
       {
         id: 8,
@@ -177,7 +177,7 @@ export const projects: ProjectType[] = [
       {
         id: 3,
         name: "MongoDB",
-        image: "mongoDB.png",
+        image: "mongodb.png",
       },
       {
         id: 4,
@@ -201,39 +201,30 @@ export const projects: ProjectType[] = [
   },
 ];
 
-export const skillGroups: SkillType[][] = [
-  [
-    { name: "HTML", img: "html.png" },
-    { name: "CSS", img: "css.svg" },
-    { name: "JavaScript", img: "javascript.png" },
-    { name: "TypeScript", img: "typescript.svg" },
-  ],
+export const skillGroups: SkillType[] = [
+  // { name: "JavaScript", img: "javascript.png" },
+  { name: "TypeScript", img: "typescript.svg" },
 
-  [
-    { name: "React.js", img: "react.webp" },
-    { name: "Next.js", img: "next.svg" },
-    { name: "Tailwind CSS", img: "tailwind.png" },
-    { name: "React Query", img: "react-query.png" },
-  ],
+  { name: "Next.js", img: "next.svg" },
+  { name: "React.js", img: "react.webp" },
+  { name: "Redux", img: "redux.png" },
+  { name: "React Query", img: "react-query.png" },
+  { name: "Tailwind CSS", img: "tailwind.png" },
 
-  [
-    { name: "Node.js", img: "node.png" },
-    { name: "Express", img: "express.png" },
-    { name: "Docker", img: "docker.webp" },
-    { name: "Git", img: "git.png" },
-  ],
+  { name: "Node.js", img: "node.png" },
+  { name: "Express", img: "express.png" },
+  { name: "MongoDB", img: "mongodb-transparent.svg" },
+  { name: "PostgreSQL", img: "PostgreSQL.png" },
+  { name: "Redis", img: "redis.png" },
+  { name: "JWT", img: "jwt.png" },
 
-  [
-    { name: "MongoDB", img: "mongoDB.png" },
-    { name: "PostgreSQL", img: "PostgreSQL.png" },
-    { name: "Redis", img: "redis.png" },
-    { name: "JWT", img: "jwt.png" },
-  ],
+  { name: "HTML", img: "html.png" },
+  { name: "CSS", img: "css.svg" },
+  { name: "Git", img: "git.png" },
 
-  [
-    { name: "Zod", img: "zod.png" },
-    { name: "Joi", img: "joi-transparent.png" },
-    { name: "Jest.js", img: "jest.webp" },
-    { name: "Formik", img: "formik.png" },
-  ],
+  { name: "Docker", img: "docker.webp" },
+  { name: "Zod", img: "zod.png" },
+  { name: "Joi", img: "joi-transparent.png" },
+  { name: "Jest.js", img: "jest.webp" },
+  { name: "Formik", img: "formik.png" },
 ];
