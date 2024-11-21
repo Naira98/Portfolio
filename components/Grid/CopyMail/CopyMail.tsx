@@ -5,7 +5,7 @@ import GridItem from "../GridItem";
 import Lottie, { Options as LottieOptions } from "react-lottie";
 import { useState } from "react";
 import animationData from "@/data/confetti.json";
-import MagicButton from "@/components/Hero/MagicButton";
+import MagicButton from "@/components/ui/MagicButton";
 import { FaCheck } from "react-icons/fa";
 import { IoCopyOutline } from "react-icons/io5";
 

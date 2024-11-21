@@ -228,3 +228,26 @@ export const skillGroups: SkillType[] = [
   { name: "Jest.js", img: "jest.webp" },
   { name: "Formik", img: "formik.png" },
 ];
+
+export const socialMedia = [
+  {
+    name: "github",
+    img: "github.svg",
+    link: "https://www.github.com/Naira98",
+  },
+  {
+    name: "linkedin",
+    img: "linkedin.svg",
+    link: "https://www.linkedin.com/in/nairamm",
+  },
+  {
+    name: "gmail",
+    img: "gmail.svg",
+    link: "mailto:nairamm99@gmail.com",
+  },
+  {
+    name: "whatsapp",
+    img: "whatsapp.svg",
+    link: "https://wa.me/201012470323",
+  },
+];

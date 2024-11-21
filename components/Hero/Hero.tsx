@@ -2,7 +2,7 @@
 
 import { FaLocationArrow } from "react-icons/fa";
 import GridBackground from "./GridBackground";
-import MagicButton from "./MagicButton";
+import MagicButton from "../ui/MagicButton";
 import { Spotlight } from "./Spotlight";
 import { TextGenerateEffect } from "./TextGenerateEffect";
 import { useRouter } from "next/navigation";

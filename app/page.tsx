@@ -4,6 +4,7 @@ import RecentProjects from "@/components/RecentProjects/RecentProjects";
 import Navbar from "@/components/Navbar/Navbar";
 import Skills from "@/components/Skills/Skills";
 import Approach from "@/components/Approach/Approach";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <RecentProjects />
       <Skills />
       <Approach />
+      <Footer />
     </main>
   );
 }

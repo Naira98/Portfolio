@@ -1,11 +1,10 @@
 "use client";
-import React from "react";
 
+import { ReactNode, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "./CanvasRevealEffect";
-
 import useSectionInView from "@/hooks/useSectionInView";
-import MagicButton from "./MagicButton";
+import MagicButton from "@/components/ui/MagicButton";
 
 export default function Approach() {
   const { ref } = useSectionInView("Approach", 0.4);
@@ -26,7 +25,7 @@ export default function Approach() {
             des="We'll collaborate to map out your website's goals, target audience, 
           and key functionalities. We'll discuss things like site structure, 
           navigation, and content requirements."
-            icon={<MagicButton title="Phase 1" />}
+            icon={<MagicButton title="Phase 1" otherClasses="w-fit" />}
           >
             <CanvasRevealEffect
               animationSpeed={5.1}
@@ -35,7 +34,7 @@ export default function Approach() {
           </Card>
           <Card
             title="Development & Progress Update"
-            icon={<MagicButton title="Phase 2" />}
+            icon={<MagicButton title="Phase 2" otherClasses="w-fit" />}
             des="Once we agree on the plan, I cue my lofi playlist and dive into
           coding. From initial sketches to polished code, I keep you updated
           every step of the way."
@@ -52,7 +51,7 @@ export default function Approach() {
           </Card>
           <Card
             title="Development & Launch"
-            icon={<MagicButton title="Phase 3" />}
+            icon={<MagicButton title="Phase 3" otherClasses="w-fit" />}
             des="This is where the magic happens! Based on the approved design, 
           I'll translate everything into functional code, building your website
           from the ground up."
@@ -77,10 +76,10 @@ const Card = ({
 }: {
   title: string;
   des: string;
-  icon: React.ReactNode;
-  children?: React.ReactNode;
+  icon: ReactNode;
+  children?: ReactNode;
 }) => {
-  const [hovered, setHovered] = React.useState(false);
+  const [hovered, setHovered] = useState(false);
   return (
     <div
       onMouseEnter={() => setHovered(true)}

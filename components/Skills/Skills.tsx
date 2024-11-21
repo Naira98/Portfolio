@@ -1,10 +1,13 @@
 "use client";
 import { skillGroups } from "@/data";
 import SkillCard from "./SkillCard";
+import useSectionInView from "@/hooks/useSectionInView";
 
 const Skills = () => {
+  const { ref } = useSectionInView("Skills", 0.3);
+
   return (
-    <div className="md:px-15 mt-20 px-12 lg:px-32">
+    <div ref={ref} id="skills" className="md:px-15 mt-20 px-12 lg:px-32">
       <h1 className="heading mb-10 text-balance">
         <span className="text-purple">Skills & Tools</span>
       </h1>
