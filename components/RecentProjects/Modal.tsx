@@ -35,7 +35,7 @@ const Modal = () => {
             <IoMdClose />
           </button>
           <video className="mb-6 h-full w-full" controls autoPlay>
-            <source src={video} type="video/mp4" />
+            <source src={`/projects/${video}`} type="video/mp4" />
           </video>
           <ProjectDescription title={title} des={des} isVideoModal={true} />
         </motion.div>

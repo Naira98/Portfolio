@@ -15,7 +15,7 @@ const ProjectImage = ({ img, title }: ProjectImagePropsType) => {
 
       {/* Project image */}
       <Image
-        src={img}
+        src={`/projects/${img}`}
         alt={title}
         width={450}
         height={250}

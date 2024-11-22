@@ -17,14 +17,14 @@ const Hero = () => {
     <div ref={ref} id="home" className="relative h-[38rem] pb-20 pt-36">
       <div className="overflow-hidden">
         <Spotlight
-          className="-left-10 -top-40 h-full md:-left-32 md:-top-20"
+          className="-left-10 -top-40 h-screen md:-left-32 md:-top-20"
           fill="white"
         />
         <Spotlight
-          className="left-[80%] top-5 h-[80vh] w-[20vw]"
+          className="left-full top-10 h-[80vh] w-[50vw]"
           fill="purple"
         />
-        <Spotlight className="left-80 top-10 h-[80vh] w-[50vw]" fill="blue" />
+        <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
       </div>
 
       <GridBackground />

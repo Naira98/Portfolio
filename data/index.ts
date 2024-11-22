@@ -41,11 +41,10 @@ export const projects: ProjectType[] = [
         image: "supabase.svg",
       },
     ],
-    img: "/projects/TheWildOasisCustomerFacing/image.png",
+    img: "TheWildOasisCustomerFacing/image.png",
+    video: "TheWildOasisCustomerFacing/TheWildOasisCustomerFacing.mp4",
     github: "https://github.com/Naira98/TheWildOasis-CustomerFacing",
     website: "https://the-wild-oasis-website-plum-pi.vercel.app/",
-    video:
-      "/projects/TheWildOasisCustomerFacing/TheWildOasisCustomerFacing.mov",
   },
   {
     id: 1,
@@ -83,10 +82,10 @@ export const projects: ProjectType[] = [
         image: "react-query.png",
       },
     ],
-    img: "/projects/TheWildOasisHotelEmployee/image.png",
+    img: "TheWildOasisHotelEmployee/image.png",
+    video: "TheWildOasisHotelEmployee/TheWildOasisHotelEmployee.mp4",
     github: "https://github.com/Naira98/TheWildOasis-EmployeeDashboard",
     website: "https://the-world-oasis-zeta.vercel.app/",
-    video: "/projects/TheWildOasisHotelEmployee/TheWildOasisHotelEmployee.mov",
   },
   {
     id: 2,
@@ -154,10 +153,10 @@ export const projects: ProjectType[] = [
         image: "docker-compose.webp",
       },
     ],
-    img: "/projects/SocialMedia/image.png",
+    img: "SocialMedia/image.png",
+    video: "SocialMedia/Social Media.mp4",
     github: "https://github.com/Naira98/SocialMedia",
     website: "http://158.101.255.206/",
-    video: "/projects/SocialMedia/Social Media.mp4",
   },
   {
     id: 3,
@@ -195,14 +194,13 @@ export const projects: ProjectType[] = [
         image: "stripe.jpeg",
       },
     ],
-    img: "/projects/E-Commerce/image.png",
+    img: "E-Commerce/image.png",
+    video: "E-Commerce/E-Commerce.mp4",
     github: "https://github.com/Naira98/E-commerce",
-    video: "/projects/E-Commerce/E-Commerce.mov",
   },
 ];
 
 export const skillGroups: SkillType[] = [
-  // { name: "JavaScript", img: "javascript.png" },
   { name: "TypeScript", img: "typescript.svg" },
 
   { name: "Next.js", img: "next.svg" },

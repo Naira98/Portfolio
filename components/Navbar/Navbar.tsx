@@ -29,7 +29,7 @@ const Navbar = () => {
         },
       )}
     >
-      <div className="relative h-24 w-64">
+      <div className="relative h-8 w-64">
         <Image
           src="/ui/logo.webp"
           alt="Naira Mokhtar Logo"

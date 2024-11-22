@@ -15,12 +15,12 @@ const Footer = () => {
       id="contact"
       ref={ref}
     >
-      <div className="absolute top-0 h-full w-[90%]">
+      <div className="absolute top-0 h-full w-full">
         <Image
           src="/ui/footerGrid.svg"
           alt="grid"
           fill
-          className="object-cover opacity-70 md:opacity-50"
+          className="object-cover opacity-50"
         />
       </div>
       <div className="flex flex-col items-center">

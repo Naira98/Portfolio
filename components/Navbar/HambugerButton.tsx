@@ -18,26 +18,26 @@ const HamburgerButton = () => {
           initial={false}
           animate={active ? "open" : "closed"}
           onClick={() => setActive((pv) => !pv)}
-          className="relative z-10 h-14 w-14 transform rounded-full transition-colors duration-300"
+          className="group/hambuger relative z-10 h-14 w-10 rounded-full"
         >
           <motion.span
             variants={VARIANTS.top}
-            className="absolute h-1 w-10 bg-white"
+            className="absolute h-1 w-8 bg-white transition-colors duration-300 group-hover/hambuger:bg-purple"
             style={{ y: "-50%", left: "50%", x: "-50%", top: "35%" }}
           />
           <motion.span
             variants={VARIANTS.middle}
-            className="absolute h-1 w-10 bg-white"
+            className="absolute h-1 w-8 bg-white transition-colors duration-300 group-hover/hambuger:bg-purple"
             style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }}
           />
           <motion.span
             variants={VARIANTS.bottom}
-            className="absolute h-1 w-5 bg-white"
+            className="absolute h-1 w-4 bg-white transition-colors duration-300 group-hover/hambuger:bg-purple"
             style={{
               x: "-50%",
               y: "50%",
               bottom: "35%",
-              left: "calc(50% + 10px)",
+              left: "calc(50% - 10px)",
             }}
           />
         </motion.button>

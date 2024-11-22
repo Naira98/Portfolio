@@ -15,16 +15,14 @@ export default function Approach() {
       className="md:px-15 mt-20 scroll-mt-24 px-12 md:scroll-mt-28 lg:px-32"
     >
       <h1 className="heading mb-5 text-balance">
-        My <span className="text-purple">Approach</span>
+        My Work <span className="text-purple">Approach</span>
       </h1>
 
       <div className="items-center justify-center">
         <div className="mx-auto grid w-full cursor-default grid-cols-1 items-center justify-center gap-6 bg-black-100 p-8 md:grid-cols-3">
           <Card
             title="Planning & Strategy"
-            des="We'll collaborate to map out your website's goals, target audience, 
-          and key functionalities. We'll discuss things like site structure, 
-          navigation, and content requirements."
+            des="I carefully understand the website's goals, audience, structure, and content needs to create a clear development roadmap."
             icon={<MagicButton title="Phase 1" otherClasses="w-fit" />}
           >
             <CanvasRevealEffect
@@ -35,9 +33,7 @@ export default function Approach() {
           <Card
             title="Development & Progress Update"
             icon={<MagicButton title="Phase 2" otherClasses="w-fit" />}
-            des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way."
+            des="Once the plan is agreed upon, I break the project into manageable milestones to maintain steady progress. My focus is on building a responsive and dynamic frontend paired with a robust backend to ensure quality."
           >
             <CanvasRevealEffect
               animationSpeed={3}
@@ -50,11 +46,9 @@ export default function Approach() {
             />
           </Card>
           <Card
-            title="Development & Launch"
+            title="Finalization & Launch"
             icon={<MagicButton title="Phase 3" otherClasses="w-fit" />}
-            des="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up."
+            des="The website undergoes extensive testing to ensure quality. After deploying, I provide support to guarantee a smooth user experience."
           >
             <CanvasRevealEffect
               animationSpeed={3}
@@ -84,7 +78,7 @@ const Card = ({
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="group/canvas-card relative mx-auto flex h-72 w-full items-center justify-center border border-white/20 p-4 md:h-[30rem]"
+      className="group/canvas-card relative mx-auto flex h-60 w-full items-center justify-center border border-white/20 p-4 md:h-[30rem]"
     >
       <Icon className="absolute -left-3 -top-3 h-6 w-6 text-white" />
       <Icon className="absolute -bottom-3 -left-3 h-6 w-6 text-white" />
