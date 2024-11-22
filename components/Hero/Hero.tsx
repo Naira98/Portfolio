@@ -10,8 +10,10 @@ import useSectionInView from "@/hooks/useSectionInView";
 
 const Hero = () => {
   const router = useRouter();
-  const { ref, setTimeOfLastClick, setActiveSection } =
-    useSectionInView("Home");
+  const { ref, setTimeOfLastClick, setActiveSection } = useSectionInView(
+    "Home",
+    0.7,
+  );
 
   return (
     <div ref={ref} id="home" className="relative h-[38rem] pb-20 pt-36">

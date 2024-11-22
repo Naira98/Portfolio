@@ -7,9 +7,13 @@ import ProblemSolving from "./ProblemSolving/ProblemSolving";
 import CopyMail from "./CopyMail/CopyMail";
 import ProjectsNum from "./ProjectsNum/ProjectsNum";
 import useSectionInView from "@/hooks/useSectionInView";
+import useScreenSize from "@/hooks/useScreenSize";
 
 const About = () => {
-  const { ref } = useSectionInView("About");
+  const screen = useScreenSize();
+  const threshold =
+    screen == "xs" || screen == "sm" ? 0.25 : screen == "md" ? 0.4 : 0.5;
+  const { ref } = useSectionInView("About", threshold);
   return (
     <section
       ref={ref}

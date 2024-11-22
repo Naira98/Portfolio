@@ -3,23 +3,29 @@
 import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
 import GridItem from "../GridItem";
 import Lottie, { Options as LottieOptions } from "react-lottie";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import animationData from "@/data/confetti.json";
 import MagicButton from "@/components/ui/MagicButton";
 import { FaCheck } from "react-icons/fa";
 import { IoCopyOutline } from "react-icons/io5";
 
+const defaultOptions: LottieOptions = {
+  loop: false,
+  autoplay: true,
+  animationData: animationData,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
+
 const CopyMail = () => {
   const [copied, setCopied] = useState(false);
 
-  const defaultOptions: LottieOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  useEffect(() => {
+    if (copied) {
+      setTimeout(() => setCopied(false), 2000);
+    }
+  }, [copied]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText("nairamm99@gmail.com");
@@ -36,7 +42,9 @@ const CopyMail = () => {
 
           <div className="mt-4 min-w-full">
             <div className="pointer-events-none absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
-              <Lottie options={defaultOptions} height={200} width={400} />
+              {copied && (
+                <Lottie options={defaultOptions} height={200} width={400} />
+              )}
             </div>
 
             <MagicButton

@@ -1,6 +1,13 @@
 "use client";
 
-import { createContext, ReactNode, useContext, useState } from "react";
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
+import styles from "./openProjectContext.module.css";
 
 type OpenProjectProviderProps = { children: ReactNode };
 
@@ -13,6 +20,14 @@ const OpenProjectContext = createContext<OpenProjectContextType | null>(null);
 
 const OpenProjectContextProvider = ({ children }: OpenProjectProviderProps) => {
   const [openProjectId, setOpenProjectId] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (openProjectId != null) {
+      document.body.classList.add(styles["overflow-hidden"]);
+    } else {
+      document.body.classList.remove(styles["overflow-hidden"]);
+    }
+  }, [openProjectId]);
 
   return (
     <OpenProjectContext.Provider

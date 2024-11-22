@@ -7,10 +7,13 @@ import ProjectDescription from "./ProjectDescription";
 import ProjectImage from "./ProjectImage";
 import { useOpenProject } from "@/context/OpenProjectContext";
 import useSectionInView from "@/hooks/useSectionInView";
+import useScreenSize from "@/hooks/useScreenSize";
 
 const RecentProjects = () => {
   const { setOpenProjectId } = useOpenProject();
-  const { ref } = useSectionInView("Projects", 0.4);
+  const screen = useScreenSize();
+  const threshold = screen == "xs" || screen == "sm" ? 0.18 : 0.4;
+  const { ref } = useSectionInView("Projects", threshold);
 
   return (
     <div

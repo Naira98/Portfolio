@@ -1,14 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import MagicButton from "../ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 import { socialMedia } from "@/data";
 import useSectionInView from "@/hooks/useSectionInView";
+import useScreenSize from "@/hooks/useScreenSize";
 
 const Footer = () => {
-  const { ref } = useSectionInView("Contact", 0.3);
+  const screen = useScreenSize();
+  // const threshold =
+  //   screen == "xs" || screen == "sm" ? 0.7 : screen == "md" ? 0.4 : 0.5;
+  const { ref } = useSectionInView("Contact", 0.4);
   return (
     <footer
       className="md:px-15 relative mt-20 w-full scroll-mt-24 px-12 pb-10 md:scroll-mt-28 lg:px-32"
@@ -32,13 +35,13 @@ const Footer = () => {
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </p>
-        <Link href="mailto:nairamm99@gmail.com">
+        <a href="mailto:nairamm99@gmail.com">
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
             position="right"
           />
-        </Link>
+        </a>
       </div>
 
       <div className="mt-16 flex items-center justify-between gap-2 md:flex-row">

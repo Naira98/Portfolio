@@ -109,4 +109,30 @@
     transform: translateX(50%);
     opacity: 100;
   }
+
+  .shiny {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      width: 200%;
+      left: -50%;
+      height: 50px;
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      top: -100%;
+      position: absolute;
+      transform: rotateZ(-30deg);
+      transition: all 0.7s;
+    }
+
+    &:hover::before {
+      top: 200%;
+    }
+  }
 }

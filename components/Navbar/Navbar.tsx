@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import HamburgerButton from "./HambugerButton";
+import HamburgerButton from "./HamburgerButton";
 import { SquigglyUnderline } from "./SquigglyUnderline";
 import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";

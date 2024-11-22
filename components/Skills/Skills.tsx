@@ -2,8 +2,12 @@
 import { skillGroups } from "@/data";
 import SkillCard from "./SkillCard";
 import useSectionInView from "@/hooks/useSectionInView";
+import useScreenSize from "@/hooks/useScreenSize";
 
 const Skills = () => {
+  const screen = useScreenSize();
+  const threshold =
+    screen == "xs" || screen == "sm" ? 0.3 : screen == "md" ? 0.4 : 0.5;
   const { ref } = useSectionInView("Skills", 0.3);
 
   return (

@@ -5,9 +5,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "./CanvasRevealEffect";
 import useSectionInView from "@/hooks/useSectionInView";
 import MagicButton from "@/components/ui/MagicButton";
+import useScreenSize from "@/hooks/useScreenSize";
 
 export default function Approach() {
-  const { ref } = useSectionInView("Approach", 0.4);
+  const screen = useScreenSize();
+  const threshold =
+    screen == "xs" || screen == "sm" ? 0.3 : screen == "md" ? 0.4 : 0.5;
+  const { ref } = useSectionInView("Approach", 0.5);
   return (
     <div
       ref={ref}
@@ -27,7 +31,7 @@ export default function Approach() {
           >
             <CanvasRevealEffect
               animationSpeed={5.1}
-              containerClassName="bg-emerald-900"
+              containerClassName="bg-black"
             />
           </Card>
           <Card
@@ -52,7 +56,7 @@ export default function Approach() {
           >
             <CanvasRevealEffect
               animationSpeed={3}
-              containerClassName="bg-sky-600"
+              containerClassName="bg-blackß"
               colors={[[125, 211, 252]]}
             />
           </Card>
