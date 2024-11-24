@@ -5,15 +5,12 @@ import GridBackground from "./GridBackground";
 import MagicButton from "../ui/MagicButton";
 import { Spotlight } from "./Spotlight";
 import { TextGenerateEffect } from "./TextGenerateEffect";
-import { useRouter } from "next/navigation";
-import useSectionInView from "@/hooks/useSectionInView";
+import { useRef } from "react";
+import { useActiveSection } from "@/context/ActiveSectionContext";
 
 const Hero = () => {
-  const router = useRouter();
-  const { ref, setTimeOfLastClick, setActiveSection } = useSectionInView(
-    "Home",
-    0.7,
-  );
+  const ref = useRef(null);
+  const { scrollTo } = useActiveSection();
 
   return (
     <div ref={ref} id="home" className="relative h-[38rem] pb-20 pt-36">
@@ -53,11 +50,7 @@ const Hero = () => {
             title="Show My Work"
             position="right"
             icon={<FaLocationArrow />}
-            onClick={() => {
-              setTimeOfLastClick(Date.now());
-              setActiveSection("Projects");
-              router.push("/#projects");
-            }}
+            onClick={() => scrollTo("Projects", "/#projects")}
           />
         </div>
       </div>

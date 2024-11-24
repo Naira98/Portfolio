@@ -4,19 +4,19 @@ import Image from "next/image";
 import MagicButton from "../ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 import { socialMedia } from "@/data";
-import useSectionInView from "@/hooks/useSectionInView";
+// import useSectionInView from "@/hooks/useSectionInView";
 import useScreenSize from "@/hooks/useScreenSize";
 
 const Footer = () => {
   const screen = useScreenSize();
   // const threshold =
   //   screen == "xs" || screen == "sm" ? 0.7 : screen == "md" ? 0.4 : 0.5;
-  const { ref } = useSectionInView("Contact", 0.4);
+  // const { ref } = useSectionInView("Contact", 0.4);
   return (
     <footer
       className="md:px-15 relative mt-20 w-full scroll-mt-24 px-12 pb-10 md:scroll-mt-28 lg:px-32"
       id="contact"
-      ref={ref}
+      // ref={ref}
     >
       <div className="absolute top-0 h-full w-full">
         <Image

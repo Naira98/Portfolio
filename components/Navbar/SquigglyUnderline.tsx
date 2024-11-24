@@ -11,8 +11,7 @@ export const SquigglyUnderline = ({
 }: {
   sideNav?: boolean;
 }) => {
-  const { activeSection, setActiveSection, setTimeOfLastClick } =
-    useActiveSection();
+  const { activeSection, scrollTo } = useActiveSection();
   return (
     <div className={clsx("flex gap-8 lg:gap-16", { "flex-col": sideNav })}>
       {navItems.map((item) => {
@@ -24,9 +23,7 @@ export const SquigglyUnderline = ({
             className={`relative text-sm leading-6 no-underline ${
               isSelected ? "font-semibold text-white" : "text-gray-500"
             }`}
-            onClick={() => {
-              setActiveSection(item.name), setTimeOfLastClick(Date.now());
-            }}
+            onClick={() => scrollTo(item.name, item.link)}
           >
             {item.name}
             {isSelected ? (

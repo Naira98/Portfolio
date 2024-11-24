@@ -6,18 +6,18 @@ import SocialLinks from "./SocialLink";
 import ProjectDescription from "./ProjectDescription";
 import ProjectImage from "./ProjectImage";
 import { useOpenProject } from "@/context/OpenProjectContext";
-import useSectionInView from "@/hooks/useSectionInView";
+// import useSectionInView from "@/hooks/useSectionInView";
 import useScreenSize from "@/hooks/useScreenSize";
 
 const RecentProjects = () => {
   const { setOpenProjectId } = useOpenProject();
   const screen = useScreenSize();
   const threshold = screen == "xs" || screen == "sm" ? 0.18 : 0.4;
-  const { ref } = useSectionInView("Projects", threshold);
+  // const { ref } = useSectionInView("Projects", threshold);
 
   return (
     <div
-      ref={ref}
+      // ref={ref}
       id="projects"
       className="md:px-15 mt-20 scroll-mt-24 px-12 md:scroll-mt-28 lg:px-32"
     >

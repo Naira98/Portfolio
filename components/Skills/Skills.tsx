@@ -1,18 +1,18 @@
 "use client";
 import { skillGroups } from "@/data";
 import SkillCard from "./SkillCard";
-import useSectionInView from "@/hooks/useSectionInView";
+// import useSectionInView from "@/hooks/useSectionInView";
 import useScreenSize from "@/hooks/useScreenSize";
 
 const Skills = () => {
   const screen = useScreenSize();
   const threshold =
     screen == "xs" || screen == "sm" ? 0.3 : screen == "md" ? 0.4 : 0.5;
-  const { ref } = useSectionInView("Skills", 0.3);
+  // const { ref } = useSectionInView("Skills", 0.3);
 
   return (
     <div
-      ref={ref}
+      // ref={ref}
       id="skills"
       className="md:px-15 mt-20 scroll-mt-24 px-12 md:scroll-mt-28 lg:px-32"
     >

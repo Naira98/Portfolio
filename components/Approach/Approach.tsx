@@ -3,7 +3,7 @@
 import { ReactNode, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "./CanvasRevealEffect";
-import useSectionInView from "@/hooks/useSectionInView";
+// import useSectionInView from "@/hooks/useSectionInView";
 import MagicButton from "@/components/ui/MagicButton";
 import useScreenSize from "@/hooks/useScreenSize";
 
@@ -11,10 +11,10 @@ export default function Approach() {
   const screen = useScreenSize();
   const threshold =
     screen == "xs" || screen == "sm" ? 0.3 : screen == "md" ? 0.4 : 0.5;
-  const { ref } = useSectionInView("Approach", 0.5);
+  // const { ref } = useSectionInView("Approach", 0.5);
   return (
     <div
-      ref={ref}
+      // ref={ref}
       id="approach"
       className="md:px-15 mt-20 scroll-mt-24 px-12 md:scroll-mt-28 lg:px-32"
     >
