@@ -25,7 +25,7 @@ export default function Approach() {
           <Card
             title="Development & Progress Update"
             icon={<MagicButton title="Phase 2" otherClasses="w-fit" />}
-            des="Once the plan is agreed upon, I break the project into manageable milestones to maintain steady progress. My focus is on building a responsive and dynamic frontend paired with a robust backend to ensure quality."
+            des="I break the project into manageable milestones to maintain steady progress. My focus is on building a responsive and dynamic frontend paired with a robust backend to ensure quality."
           >
             <CanvasRevealEffect
               animationSpeed={3}
@@ -38,9 +38,9 @@ export default function Approach() {
             />
           </Card>
           <Card
-            title="Finalization & Launch"
+            title="Testing & Deployment"
             icon={<MagicButton title="Phase 3" otherClasses="w-fit" />}
-            des="The website undergoes extensive testing to ensure quality. After deploying, I provide support to guarantee a smooth user experience."
+            des="The website is rigorously tested to ensure top-notch quality. After deployment, I offer ongoing support to ensure a smooth user experience."
           >
             <CanvasRevealEffect
               animationSpeed={3}
