@@ -12,7 +12,7 @@ import { IconListType } from "@/data/types";
 export const AnimatedTooltip = ({
   items,
 }: {
-  items: IconListType;
+  items: Partial<IconListType>;
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };
@@ -38,11 +38,11 @@ export const AnimatedTooltip = ({
           className="group relative -mr-3 cursor-default"
           onClick={(e) => e.stopPropagation()}
           key={idx}
-          onMouseEnter={() => setHoveredIndex(item.id)}
+          onMouseEnter={() => setHoveredIndex(item?.id || null)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence mode="popLayout">
-            {hoveredIndex === item.id && (
+            {hoveredIndex === item?.id && (
               <motion.div
                 initial={{ opacity: 0, y: 20, scale: 0.6 }}
                 animate={{
@@ -76,7 +76,7 @@ export const AnimatedTooltip = ({
             height={100}
             width={100}
             src={techAssets[item.image]}
-            alt={item.name}
+            alt={item?.name}
             className="relative !m-0 h-9 w-9 rounded-full border border-white/[0.2] bg-black-100 object-cover object-top p-1 transition duration-500 group-hover:z-30 group-hover:scale-105"
           />
         </div>
