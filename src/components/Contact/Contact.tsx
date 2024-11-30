@@ -4,8 +4,6 @@ import MagicButton from "../ui/MagicButton";
 import { socialMedia } from "@/data";
 import * as uiAssets from "@/assets/ui";
 
-console.log(uiAssets);
-
 const Contact = () => {
   return (
     <footer className="relative w-full pb-10" id="contact">
