@@ -213,7 +213,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
       );
 
       globeRef.current.ringsData(
-        globeData.filter((d, i) => numbersOfRings.includes(i)),
+        globeData.filter((_, i) => numbersOfRings.includes(i)),
       );
     }, 2000);
 
@@ -279,7 +279,7 @@ export function World(props: WorldProps) {
 
 export function hexToRgb(hex: string) {
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-  hex = hex.replace(shorthandRegex, function (m, r, g, b) {
+  hex = hex.replace(shorthandRegex, function (_, r, g, b) {
     return r + r + g + g + b + b;
   });
 

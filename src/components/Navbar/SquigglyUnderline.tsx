@@ -20,7 +20,7 @@ export const SquigglyUnderline = ({
             className={`relative text-sm leading-6 no-underline ${
               isSelected ? "font-semibold text-white" : "text-gray-500"
             }`}
-            onClick={() => scrollTo(item.name, item.link)}
+            onClick={() => scrollTo(item.name)}
           >
             {item.name}
             {isSelected ? (

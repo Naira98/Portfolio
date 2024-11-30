@@ -1,8 +1,9 @@
 import gradientBg from "@/assets/ui/gradientBg.png";
 import * as projectAssets from "@/assets/projects";
+import { ProjectsArrayType } from "@/data/types";
 
 interface ProjectImagePropsType {
-  image: string;
+  image: ProjectsArrayType[number]["image"];
   title: string;
 }
 
