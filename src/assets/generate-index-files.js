@@ -41,7 +41,6 @@ async function run(dir = import.meta.dirname) {
           .slice(0, -1)
           .join(".")
           .replaceAll(/[^a-zA-Z0-9]+/g, "");
-        if (importName == "import") importName += "_";
 
         exportLines.push(
           `export { default as ${importName} } from './${file}';`,

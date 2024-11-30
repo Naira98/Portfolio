@@ -1,9 +1,7 @@
-import { projects } from "@/data";
+import { projects, skills } from "@/data";
 
 export type ProjectsArrayType = typeof projects;
-export type IconListType = (typeof projects)[number]["iconLists"];
+export type IconListType =
+  (typeof projects)[number]["iconLists"];
 
-export interface SkillType {
-  name: string;
-  img: string;
-}
+export type SkillType = typeof skills;

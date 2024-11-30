@@ -9,11 +9,7 @@ import {
 import * as techAssets from "@/assets/tech";
 import { IconListType } from "@/data/types";
 
-export const AnimatedTooltip = ({
-  items,
-}: {
-  items: Partial<IconListType>;
-}) => {
+export const AnimatedTooltip = ({ items }: { items: IconListType[number] }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };
   const x = useMotionValue(0);

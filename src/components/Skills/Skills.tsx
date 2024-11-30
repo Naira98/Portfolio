@@ -1,4 +1,4 @@
-import { skillGroups } from "@/data";
+import { skills } from "@/data";
 import SkillCard from "./SkillCard";
 
 const Skills = () => {
@@ -11,9 +11,9 @@ const Skills = () => {
         id="skills"
         className="flex flex-wrap items-center justify-center gap-3"
       >
-        {skillGroups.map((skill, i) => (
+        {skills.map((skill, i) => (
           <div key={i}>
-            <SkillCard key={skill.name} name={skill.name} img={skill.img} />
+            <SkillCard name={skill.name} img={skill.img} />
           </div>
         ))}
       </div>

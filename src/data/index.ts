@@ -1,5 +1,3 @@
-import { SkillType } from "./types";
-
 export const navItems = [
   { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
@@ -15,31 +13,33 @@ export const projects = [
     title: "The World Oasis “Customer Facing”",
     des: "Airbnb clone. Customer facing website to discover cabins with an intuitive calendar that displays available dates allowing guests to book their stay.",
     iconLists: [
-      {
-        id: 1,
-        name: "TypeScript",
-        image: "typescript",
-      },
-      {
-        id: 2,
-        name: "Next.js",
-        image: "next",
-      },
-      {
-        id: 3,
-        name: "Tailwind CSS",
-        image: "tailwind",
-      },
-      {
-        id: 4,
-        name: "OAuth",
-        image: "authjs",
-      },
-      {
-        id: 5,
-        name: "Supabase",
-        image: "supabase",
-      },
+      [
+        {
+          id: 1,
+          name: "TypeScript",
+          image: "typescript",
+        },
+        {
+          id: 2,
+          name: "Next.js",
+          image: "next",
+        },
+        {
+          id: 3,
+          name: "Tailwind CSS",
+          image: "tailwind",
+        },
+        {
+          id: 4,
+          name: "OAuth",
+          image: "authjs",
+        },
+        {
+          id: 5,
+          name: "Supabase",
+          image: "supabase",
+        },
+      ],
     ],
     image: "thewildoasiscustomerfacing",
     video: "thewildoasiscustomerfacing",
@@ -51,36 +51,38 @@ export const projects = [
     title: "The World Oasis “Employee Dashboard”",
     des: "The hotel's internal website offers a dashboard where staff monitor hotel statistics, track bookings, manage check-ins and check-outs with ease.",
     iconLists: [
-      {
-        id: 1,
-        name: "TypeScript",
-        image: "typescript",
-      },
-      {
-        id: 2,
-        name: "React",
-        image: "react",
-      },
-      {
-        id: 3,
-        name: "Styled Components",
-        image: "styledcomponents",
-      },
-      {
-        id: 4,
-        name: "Supabase",
-        image: "supabase",
-      },
-      {
-        id: 5,
-        name: "React Router",
-        image: "reactrouter",
-      },
-      {
-        id: 6,
-        name: "React Query",
-        image: "reactquery",
-      },
+      [
+        {
+          id: 1,
+          name: "TypeScript",
+          image: "typescript",
+        },
+        {
+          id: 2,
+          name: "React",
+          image: "react",
+        },
+        {
+          id: 3,
+          name: "Styled Components",
+          image: "styledcomponents",
+        },
+        {
+          id: 4,
+          name: "Supabase",
+          image: "supabase",
+        },
+        {
+          id: 5,
+          name: "React Router",
+          image: "reactrouter",
+        },
+        {
+          id: 6,
+          name: "React Query",
+          image: "reactquery",
+        },
+      ],
     ],
     image: "thewildoasishotelemployee",
     video: "thewildoasishotelemployee",
@@ -92,66 +94,72 @@ export const projects = [
     title: "Social Media",
     des: "Full stack online platform allows users to create, share content and  connect with friends. With support of dark mode and responsive design.",
     iconLists: [
-      {
-        id: 1,
-        name: "TypeScript",
-        image: "typescript",
-      },
-      {
-        id: 2,
-        name: "React",
-        image: "react",
-      },
-      {
-        id: 3,
-        name: "React Query",
-        image: "reactquery",
-      },
-      {
-        id: 4,
-        name: "React Router",
-        image: "reactrouter",
-      },
-      {
-        id: 5,
-        name: "Node.js",
-        image: "node",
-      },
-      {
-        id: 6,
-        name: "Express",
-        image: "express",
-      },
-      {
-        id: 7,
-        name: "MongoDB",
-        image: "mongodb",
-      },
-      {
-        id: 8,
-        name: "JWT",
-        image: "jwt",
-      },
-      {
-        id: 9,
-        name: "Joi",
-        image: "joiwhite",
-      },
-      {
-        id: 10,
-        name: "Jest",
-        image: "jest",
-      },
-      {
-        id: 11,
-        name: "Docker",
-        image: "docker",
-      },
-      {
-        id: 12,
-        name: "Docker compose",
-        image: "dockercompose",
-      },
+      [
+        {
+          id: 1,
+          name: "TypeScript",
+          image: "typescript",
+        },
+        {
+          id: 2,
+          name: "React",
+          image: "react",
+        },
+        {
+          id: 3,
+          name: "React Query",
+          image: "reactquery",
+        },
+        {
+          id: 4,
+          name: "React Router",
+          image: "reactrouter",
+        },
+      ],
+      [
+        {
+          id: 5,
+          name: "Node.js",
+          image: "node",
+        },
+        {
+          id: 6,
+          name: "Express",
+          image: "express",
+        },
+        {
+          id: 7,
+          name: "MongoDB",
+          image: "mongodb",
+        },
+        {
+          id: 8,
+          name: "JWT",
+          image: "jwt",
+        },
+      ],
+      [
+        {
+          id: 9,
+          name: "Joi",
+          image: "joiwhite",
+        },
+        {
+          id: 10,
+          name: "Jest",
+          image: "jest",
+        },
+        {
+          id: 11,
+          name: "Docker",
+          image: "docker",
+        },
+        {
+          id: 12,
+          name: "Docker compose",
+          image: "dockercompose",
+        },
+      ],
     ],
     image: "socialmedia",
     video: "socialmedia",
@@ -163,36 +171,38 @@ export const projects = [
     title: "E-commerce",
     des: "Full stack online shop with an admin panel for sellers to showcase their products and a storefront for clients to browse and purchase products.",
     iconLists: [
-      {
-        id: 1,
-        name: "Node.js",
-        image: "node",
-      },
-      {
-        id: 2,
-        name: "Express",
-        image: "express",
-      },
-      {
-        id: 3,
-        name: "MongoDB",
-        image: "mongodb",
-      },
-      {
-        id: 4,
-        name: "Express Validator",
-        image: "expressvalidator",
-      },
-      {
-        id: 5,
-        name: ".ejs",
-        image: "ejs",
-      },
-      {
-        id: 6,
-        name: "Stripe",
-        image: "stripe",
-      },
+      [
+        {
+          id: 1,
+          name: "Node.js",
+          image: "node",
+        },
+        {
+          id: 2,
+          name: "Express",
+          image: "express",
+        },
+        {
+          id: 3,
+          name: "MongoDB",
+          image: "mongodb",
+        },
+        {
+          id: 4,
+          name: "Express Validator",
+          image: "expressvalidator",
+        },
+        {
+          id: 5,
+          name: ".ejs",
+          image: "ejs",
+        },
+        {
+          id: 6,
+          name: "Stripe",
+          image: "stripe",
+        },
+      ],
     ],
     image: "ecommerce",
     video: "ecommerce",
@@ -200,7 +210,7 @@ export const projects = [
   },
 ] as const;
 
-export const skillGroups: SkillType[] = [
+export const skills = [
   { name: "TypeScript", img: "typescript" },
 
   { name: "Next.js", img: "next" },

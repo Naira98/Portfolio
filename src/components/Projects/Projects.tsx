@@ -37,22 +37,19 @@ const Projects = () => {
 
               <div className="mt-3 flex w-full items-center justify-between">
                 <div className="flex">
-                  {/* Social Meida project */}
-                  {project.id === 2 ? (
+                  {project.iconLists.map((items, index) => (
                     <>
-                      <AnimatedTooltip items={project.iconLists.slice(0, 3)} />
-                      <div className="lg:w-4" />
-                      <AnimatedTooltip items={project.iconLists.slice(4, 9)} />
-                      <div className="lg:w-4" />
-                      <AnimatedTooltip
-                        items={project.iconLists.slice(10, 12)}
-                      />
+                      {index ? <div className="lg:w-4" /> : null}
+                      <AnimatedTooltip items={items} />
                     </>
-                  ) : (
-                    <AnimatedTooltip items={project.iconLists} />
-                  )}
+                  ))}
                 </div>
-                <SocialLinks id={project.id} github={project.github} website={project.website} video={project.video} />
+                <SocialLinks
+                  id={project.id}
+                  github={project.github}
+                  website={"website" in project ? project.website : undefined}
+                  video={project.video}
+                />
               </div>
             </div>
           </div>
