@@ -222,7 +222,7 @@ export const skills = [
   { name: "Node.js", img: "node" },
   { name: "Express", img: "express" },
   { name: "MongoDB", img: "mongodbtransparent" },
-  { name: "PostgreSQL", img: "postgreSQL" },
+  { name: "PostgreSQL", img: "postgresql" },
   { name: "Redis", img: "redis" },
   { name: "JWT", img: "jwt" },
 

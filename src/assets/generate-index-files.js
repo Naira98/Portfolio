@@ -34,7 +34,7 @@ async function run(dir = import.meta.dirname) {
 
         let importName = file.replaceAll(/[^a-zA-Z0-9]+/g, "");
 
-        exportLines.push(`export * as ${importName} from './${file}';`);
+        exportLines.push(`export * as ${importName} from "./${file}";`);
       } else if (hasSupportedExtension(file)) {
         let importName = file
           .split(".")
@@ -43,13 +43,13 @@ async function run(dir = import.meta.dirname) {
           .replaceAll(/[^a-zA-Z0-9]+/g, "");
 
         exportLines.push(
-          `export { default as ${importName} } from './${file}';`,
+          `export { default as ${importName} } from "./${file}";`,
         );
       }
     }),
   );
 
-  let content = exportLines.join("\n");
+  let content = exportLines.join("\n") + "\n";
   fs.writeFile(resolve(dir, "index.ts"), content);
 }
 
