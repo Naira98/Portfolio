@@ -4,6 +4,7 @@ export default {
   prefix: "",
   theme: {
     screens: {
+      xs: '455px',
       sm: "640px",
       md: "890px",
       lg: "1300px",

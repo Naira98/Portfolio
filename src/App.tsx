@@ -28,7 +28,7 @@ const App = () => {
       <div ref={homeRef} />
       <Home />
 
-      <div className="md:px-15 -mt-20 space-y-20 px-12 lg:px-32">
+      <div className="md:mx-15 -mt-20 space-y-20 mx-4 sm:mx-12 lg:mx-32">
         <div ref={aboutRef} />
         <About />
         <div ref={projectsRef} />

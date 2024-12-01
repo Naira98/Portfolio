@@ -6,7 +6,7 @@ const HamburgerButton = () => {
   const [active, setActive] = useState(false);
   return (
     <>
-      <div className="relative z-10 scale-90">
+      <div className="relative z-10 sm:scale-90 scale-[80%]">
         <MotionConfig
           transition={{
             duration: 0.5,

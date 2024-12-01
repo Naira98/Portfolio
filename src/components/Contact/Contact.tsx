@@ -28,7 +28,7 @@ const Contact = () => {
         </a>
       </div>
 
-      <div className="mt-16 flex items-center justify-between gap-2 md:flex-row">
+      <div className="mt-16 flex flex-col items-center justify-between gap-2 sm:flex-row">
         <p className="text-sm font-light md:font-normal">
           Copyright © 2024 Naira Mokhtar
         </p>

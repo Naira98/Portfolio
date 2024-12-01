@@ -9,7 +9,11 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      window.scrollY >= 150 ? setIsScrolled(true) : setIsScrolled(false);
+      if (window.scrollY >= 150) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
     };
     window.addEventListener("scroll", handleScroll);
 
@@ -20,7 +24,7 @@ const Navbar = () => {
     <nav
       ref={ref}
       className={clsx(
-        "from-black-100 fixed flex h-20 w-full transform items-center justify-between bg-gradient-to-b to-transparent px-6 duration-300 md:px-14",
+        "fixed flex h-20 w-full transform items-center justify-between bg-gradient-to-b from-black-100 to-transparent px-4 duration-300 md:px-14",
         {
           "from-black from-70% opacity-90": isScrolled,
         },

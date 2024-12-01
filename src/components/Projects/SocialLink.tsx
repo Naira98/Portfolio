@@ -12,20 +12,20 @@ interface SocialLinksPropsTypes {
 
 const SocialLinks = ({ id, github, website, video }: SocialLinksPropsTypes) => {
   return (
-    <div className="flex items-center justify-center gap-2">
+    <div className="flex items-center justify-center xs:gap-2 gap-1">
       {github && (
         <LinkIcon title="Github" href={github}>
-          <FaGithub size={24} />
+          <FaGithub className="lg:h-7 lg:w-7 h-6 w-6" />
         </LinkIcon>
       )}
       {website && (
         <LinkIcon title="Website" href={website}>
-          <BsGlobe2 size={24} />
+          <BsGlobe2 className="lg:h-7 lg:w-7 h-6 w-6" />
         </LinkIcon>
       )}
       {video && (
         <VideoIcon title="Video" projectId={id}>
-          <FaVideo size={24} />
+          <FaVideo className="lg:h-7 lg:w-7 h-6 w-6" />
         </VideoIcon>
       )}
     </div>

@@ -11,7 +11,7 @@ export default function Approach() {
       </h1>
 
       <div className="items-center justify-center">
-        <div className="mx-auto grid w-full cursor-default grid-cols-1 items-center justify-center gap-6 bg-black-100 p-8 md:grid-cols-3">
+        <div className="mx-auto grid w-full cursor-default grid-cols-1 items-center justify-center gap-6 bg-black-100 p-3 md:p-8 md:grid-cols-3">
           <Card
             title="Planning & Strategy"
             des="I carefully understand the website's goals, audience, structure, and content needs to create a clear development roadmap."

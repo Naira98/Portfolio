@@ -18,14 +18,14 @@ const Modal = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         onClick={() => setOpenProjectId(null)}
-        className="fixed inset-0 z-50 grid cursor-pointer place-items-center bg-slate-900/20 p-8 backdrop-blur"
+        className="fixed inset-0 z-50 grid cursor-pointer place-items-center bg-slate-900/20 backdrop-blur"
       >
         <motion.div
           initial={{ scale: 0, rotate: "12.5deg" }}
           animate={{ scale: 1, rotate: "0deg" }}
           exit={{ scale: 0, rotate: "12.5deg" }}
           onClick={(e) => e.stopPropagation()}
-          className="relative h-fit w-[80vw] cursor-default overflow-hidden rounded-2xl border border-white/20 bg-black-100 px-10 py-12 text-white shadow-xl md:w-[70vw] lg:w-[70vw]"
+          className="relative h-fit cursor-default overflow-hidden rounded-2xl border border-white/20 bg-black-100 px-4 text-white shadow-xl sm:px-10 py-12 w-[90vw] md:w-[80vw] lg:w-[70vw]"
         >
           <button
             className="absolute right-4 top-4 rounded-full border border-white/20 bg-black-100 p-1 text-purple transition duration-300 hover:bg-purple hover:text-black-100"

@@ -15,27 +15,22 @@ export const projects = [
     iconLists: [
       [
         {
-          id: 1,
           name: "TypeScript",
           image: "typescript",
         },
         {
-          id: 2,
           name: "Next.js",
           image: "next",
         },
         {
-          id: 3,
           name: "Tailwind CSS",
           image: "tailwind",
         },
         {
-          id: 4,
           name: "OAuth",
           image: "authjs",
         },
         {
-          id: 5,
           name: "Supabase",
           image: "supabase",
         },
@@ -53,32 +48,26 @@ export const projects = [
     iconLists: [
       [
         {
-          id: 1,
           name: "TypeScript",
           image: "typescript",
         },
         {
-          id: 2,
           name: "React",
           image: "react",
         },
         {
-          id: 3,
           name: "Styled Components",
           image: "styledcomponents",
         },
         {
-          id: 4,
           name: "Supabase",
           image: "supabase",
         },
         {
-          id: 5,
           name: "React Router",
           image: "reactrouter",
         },
         {
-          id: 6,
           name: "React Query",
           image: "reactquery",
         },
@@ -96,69 +85,57 @@ export const projects = [
     iconLists: [
       [
         {
-          id: 1,
           name: "TypeScript",
           image: "typescript",
         },
         {
-          id: 2,
           name: "React",
           image: "react",
         },
         {
-          id: 3,
           name: "React Query",
           image: "reactquery",
         },
         {
-          id: 4,
           name: "React Router",
           image: "reactrouter",
         },
       ],
       [
         {
-          id: 5,
           name: "Node.js",
           image: "node",
         },
         {
-          id: 6,
           name: "Express",
           image: "express",
         },
         {
-          id: 7,
           name: "MongoDB",
           image: "mongodb",
         },
         {
-          id: 8,
           name: "JWT",
           image: "jwt",
         },
       ],
       [
         {
-          id: 9,
           name: "Joi",
           image: "joiwhite",
         },
         {
-          id: 10,
           name: "Jest",
           image: "jest",
         },
         {
-          id: 11,
           name: "Docker",
           image: "docker",
         },
         {
-          id: 12,
-          name: "Docker compose",
+          name: "Docker Compose",
           image: "dockercompose",
-        },
+        }
       ],
     ],
     image: "socialmedia",
@@ -173,32 +150,26 @@ export const projects = [
     iconLists: [
       [
         {
-          id: 1,
           name: "Node.js",
           image: "node",
         },
         {
-          id: 2,
           name: "Express",
           image: "express",
         },
         {
-          id: 3,
           name: "MongoDB",
           image: "mongodb",
         },
         {
-          id: 4,
           name: "Express Validator",
           image: "expressvalidator",
         },
         {
-          id: 5,
           name: ".ejs",
           image: "ejs",
         },
         {
-          id: 6,
           name: "Stripe",
           image: "stripe",
         },

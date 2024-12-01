@@ -97,7 +97,7 @@ const ActiveSectionProvider = ({ children }: ActiveSectionProviderProps) => {
         setActiveSection(sections[0]);
         return;
       }
-      if (scrollY + innerHeight >= clientHeight) {
+      if (scrollY + innerHeight + 8 >= clientHeight) {
         setActiveSection(sections[sections.length - 1]);
         return;
       }

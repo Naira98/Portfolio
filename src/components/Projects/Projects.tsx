@@ -11,22 +11,22 @@ const Projects = () => {
 
   return (
     <div id="projects" className="scroll-mt-20">
-      <h1 className="heading mb-5 text-balance">
-        A small selection&nbsp;of{" "}
-        <span className="text-purple">recent projects</span>
+      <h1 className="heading mb-5 justify-self-center text-balance max-sm:max-w-[555px] sm:max-md:-mx-10">
+        Small Selection&nbsp;of{" "}
+        <span className="text-purple">Recent Projects</span>
       </h1>
 
-      <div className="grid grid-cols-1 items-center justify-center gap-8 md:grid-cols-2">
+      <div className="grid grid-cols-1 items-center justify-center gap-4 sm:gap-8 md:grid-cols-2">
         {/* Maping on projects */}
         {projects.map((project) => (
           /* All projects */
           <div
             key={project.title}
-            className="rotated-image-container relative flex h-min w-fit flex-col flex-nowrap content-center items-center justify-center gap-10 rounded-2xl border bg-white/20 decoration-clone p-px transition duration-500 hover:bg-purple"
+            className="rotated-image-container relative flex h-min w-fit flex-col flex-nowrap content-center items-center justify-center rounded-2xl border border-white/[0.1] bg-white/20 decoration-clone p-px transition duration-500 hover:bg-purple"
           >
             {/* Single Project */}
             <div
-              className="flex h-[25rem] w-auto cursor-pointer flex-col items-center justify-between rounded-[inherit] bg-black-100 p-4 text-white"
+              className="flex h-[20rem] gap-2 sm:gap-0 w-auto cursor-pointer flex-col items-center justify-between rounded-[inherit] bg-black-100 p-2 text-white sm:h-[25rem] sm:p-4"
               onClick={() => {
                 setOpenProjectId(project.id);
               }}
@@ -35,7 +35,7 @@ const Projects = () => {
 
               <ProjectDescription title={project.title} des={project.des} />
 
-              <div className="mt-3 flex w-full items-center justify-between">
+              <div className="flex w-full items-center justify-between sm:mt-3">
                 <div className="flex">
                   {project.iconLists.map((items, index) => (
                     <>

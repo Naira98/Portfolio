@@ -31,14 +31,14 @@ export const AnimatedTooltip = ({ items }: { items: IconListType[number] }) => {
     <>
       {items.map((item, idx) => (
         <div
-          className="group relative -mr-3 cursor-default"
+          className="group relative md:max-lg:-mx-2 -mr-3 cursor-default"
           onClick={(e) => e.stopPropagation()}
           key={idx}
-          onMouseEnter={() => setHoveredIndex(item?.id || null)}
+          onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence mode="popLayout">
-            {hoveredIndex === item?.id && (
+            {hoveredIndex === idx && (
               <motion.div
                 initial={{ opacity: 0, y: 20, scale: 0.6 }}
                 animate={{
@@ -73,7 +73,7 @@ export const AnimatedTooltip = ({ items }: { items: IconListType[number] }) => {
             width={100}
             src={techAssets[item.image]}
             alt={item?.name}
-            className="relative !m-0 h-9 w-9 rounded-full border border-white/[0.2] bg-black-100 object-cover object-top p-1 transition duration-500 group-hover:z-30 group-hover:scale-105"
+            className="relative !m-0 xs:h-9 xs:w-9 h-[1.85rem] w-[1.85rem] rounded-full border border-white/[0.2] bg-black-100 object-cover object-top p-1 transition duration-500 group-hover:z-30 group-hover:scale-105"
           />
         </div>
       ))}

@@ -9,7 +9,7 @@ interface ProjectImagePropsType {
 
 const ProjectImage = ({ image, title }: ProjectImagePropsType) => {
   return (
-    <div className="relative mb-5 flex h-[14rem] w-full items-center justify-center overflow-hidden">
+    <div className="relative md:mb-5 mb-2 flex w-full items-center justify-center overflow-hidden">
       {/* Background image div */}
       <div className="relative h-full w-full overflow-hidden rounded-2xl">
         <img src={gradientBg} alt="bg-image" />
