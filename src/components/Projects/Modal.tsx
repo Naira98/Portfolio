@@ -9,7 +9,7 @@ const Modal = () => {
   const { openProjectId, setOpenProjectId } = useOpenProject();
 
   if (openProjectId == null) return;
-  const { title, des, video } = projects[openProjectId];
+  const { title, des, video, logo } = projects[openProjectId];
 
   return (
     <AnimatePresence>
@@ -36,7 +36,7 @@ const Modal = () => {
           <video className="mb-6 h-full w-full" controls autoPlay>
             <source src={projectAssets[video].video} type="video/mp4" />
           </video>
-          <ProjectDescription title={title} des={des} isVideoModal={true} />
+          <ProjectDescription title={title} des={des} isVideoModal={true} logo={logo} />
         </motion.div>
       </motion.div>
     </AnimatePresence>
