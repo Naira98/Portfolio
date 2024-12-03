@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { useOpenProject } from "@/context/OpenProjectContext";
+import { useOpenProject } from "@/context/OpenProjectContext/useOpenProject";
 
 interface VideoIconPropsType {
   children: ReactNode;

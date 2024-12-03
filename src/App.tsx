@@ -5,7 +5,7 @@ import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
-import { useActiveSection } from "./context/ActiveSectionContext";
+import { useActiveSection } from "./context/ActiveSectionContext/useActiveSection";
 
 const App = () => {
   const {
@@ -28,7 +28,7 @@ const App = () => {
       <div ref={homeRef} />
       <Home />
 
-      <div className="md:mx-15 -mt-20 space-y-20 mx-4 sm:mx-12 lg:mx-32">
+      <div className="md:mx-15 mx-4 -mt-20 space-y-20 sm:mx-12 lg:mx-32">
         <div ref={aboutRef} />
         <About />
         <div ref={projectsRef} />

@@ -3,7 +3,7 @@ import MagicButton from "../ui/MagicButton";
 import { TextGenerateEffect } from "./TextGenerateEffect";
 import GridBackground from "./GridBackground";
 import { FaLocationArrow } from "react-icons/fa";
-import { useActiveSection } from "../../context/ActiveSectionContext";
+import { useActiveSection } from "@/context/ActiveSectionContext/useActiveSection";
 
 const Home = () => {
   const { scrollTo } = useActiveSection();

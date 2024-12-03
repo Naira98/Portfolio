@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import clsx from "clsx";
 import { navItems } from "../../data";
-import { useActiveSection } from "../../context/ActiveSectionContext";
+import { useActiveSection } from "@/context/ActiveSectionContext/useActiveSection";
 
 export const SquigglyUnderline = ({
   sideNav = false,

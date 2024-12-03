@@ -137,7 +137,7 @@ export const projects = [
         {
           name: "Docker Compose",
           image: "dockercompose",
-        }
+        },
       ],
     ],
     image: "socialmedia",
@@ -148,6 +148,119 @@ export const projects = [
   },
   {
     id: 3,
+    title: "World Wise",
+    des: "Full stack website to keep track of your adventures that combines interactive mapping technology with user-driven reviews of his visits to any country.",
+    iconLists: [
+      [
+        {
+          name: "Node.js",
+          image: "node",
+        },
+        {
+          name: "Express",
+          image: "express",
+        },
+        {
+          name: "MongoDB",
+          image: "mongodb",
+        },
+        {
+          name: "JWT",
+          image: "jwt",
+        },
+        {
+          name: "React",
+          image: "react",
+        },
+        {
+          name: "CSS Modules",
+          image: "cssmodules",
+        },
+        {
+          name: "React Router",
+          image: "reactrouter",
+        },
+        {
+          name: "React Leaflet",
+          image: "reactleaflet",
+        },
+      ],
+    ],
+    image: "worldwise",
+    video: "worldwise",
+    logo: "worldwise",
+    github: "https://github.com/Naira98/worldWise",
+  },{
+    id: 4,
+    title: "Fast React Pizza",
+    des: "Pizza restaurant storefront with streamlined online ordering experience, priority management and tracking orders.",
+    iconLists: [
+      [
+        {
+          name: "React",
+          image: "react",
+        },
+        {
+          name: "Redux",
+          image: "redux",
+        },
+        {
+          name: "Tailwind CSS",
+          image: "tailwind",
+        },
+
+        {
+          name: "React Router",
+          image: "reactrouter",
+        },
+      ],
+    ],
+    image: "fastreactpizza",
+    video: "fastreactpizza",
+    logo: "fastreactpizza",
+    website: 'https://fast-react-pizza-web.vercel.app/',
+    github: "https://github.com/Naira98/FastReactPizza",
+  },
+  {
+    id: 5,
+    title: "Bosta",
+    des: "A responsive bilingual (Arabic and English) order tracking interface, enabling users to track shipments effortlessly. The design focuses on accessibility, usability, and seamless functionality across all screen sizes.",
+    iconLists: [
+      [
+        {
+          name: "TypeScript",
+          image: "typescript",
+        },
+        {
+          name: "React",
+          image: "react",
+        },
+        {
+          name: "React Query",
+          image: "reactquery",
+        },
+        {
+          name: "Tailwind CSS",
+          image: "tailwind",
+        },
+
+        {
+          name: "React Router",
+          image: "reactrouter",
+        },
+        {
+          name: "React-i18next",
+          image: "i18n",
+        },
+      ],
+    ],
+    image: "bosta",
+    video: "bosta",
+    logo: "bosta",
+    github: "https://github.com/Naira98/Bosta",
+  },
+  {
+    id: 6,
     title: "E-commerce",
     des: "Full stack online shop with an admin panel for sellers to showcase their products and a storefront for clients to browse and purchase products.",
     iconLists: [
@@ -182,6 +295,39 @@ export const projects = [
     video: "ecommerce",
     logo: "ecommerce",
     github: "https://github.com/Naira98/E-commerce",
+  },
+  {
+    id: 7,
+    title: "BattleShip Game",
+    des: "Simulation of the classic board game with added digital convenience with some features as sound effects that enhance the tactical experience.",
+    iconLists: [
+      [
+        {
+          name: "HTML",
+          image: "html",
+        },
+        {
+          name: "CSS",
+          image: "css",
+        },
+        {
+          name: "JavaScript",
+          image: "javascript",
+        },
+        {
+          name: "Node.js",
+          image: "node",
+        },
+        {
+          name: "Express",
+          image: "express",
+        },
+      ],
+    ],
+    image: "battleship",
+    logo: "battleship",
+    website: "https://battle-ship-game-phi.vercel.app/",
+    github: "https://github.com/Naira98/BattleShip",
   },
 ] as const;
 

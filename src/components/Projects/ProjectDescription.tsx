@@ -32,7 +32,7 @@ const ProjectDescription = ({
       </div>
       <p
         className={clsx(
-          "line-clamp-2 text-left text-sm font-light sm:text-base",
+          "line-clamp-2 text-left text-sm font-light",
           {
             "line-clamp-none text-base": isVideoModal,
           },

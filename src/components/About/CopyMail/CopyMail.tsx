@@ -45,7 +45,6 @@ const CopyMail = () => {
               icon={copied ? <FaCheck /> : <IoCopyOutline />}
               position="left"
               onClick={handleCopy}
-              otherClasses="!bg-[#161A31]"
             />
           </div>
         </div>

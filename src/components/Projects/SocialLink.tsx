@@ -12,20 +12,20 @@ interface SocialLinksPropsTypes {
 
 const SocialLinks = ({ id, github, website, video }: SocialLinksPropsTypes) => {
   return (
-    <div className="flex items-center justify-center xs:gap-2 gap-1">
+    <div className="flex items-center justify-center gap-1 xs:gap-2">
       {github && (
         <LinkIcon title="Github" href={github}>
-          <FaGithub className="lg:h-7 lg:w-7 h-6 w-6" />
+          <FaGithub className="h-6 w-6 lg:h-7 lg:w-7" />
         </LinkIcon>
       )}
       {website && (
         <LinkIcon title="Website" href={website}>
-          <BsGlobe2 className="lg:h-7 lg:w-7 h-6 w-6" />
+          <BsGlobe2 className="h-6 w-6 lg:h-7 lg:w-7" />
         </LinkIcon>
       )}
       {video && (
         <VideoIcon title="Video" projectId={id}>
-          <FaVideo className="lg:h-7 lg:w-7 h-6 w-6" />
+          <FaVideo className="h-6 w-6 lg:h-7 lg:w-7" />
         </VideoIcon>
       )}
     </div>
@@ -43,7 +43,7 @@ const LinkIcon = ({
   color?: string;
 }) => {
   return (
-    <span className="tooltip relative">
+    <span className="tooltip relative" onClick={(e) => e.stopPropagation()}>
       <a href={href} target="_blank" className="text-white hover:text-purple">
         {children}
       </a>

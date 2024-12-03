@@ -3,11 +3,20 @@ import { AnimatedTooltip } from "./AnimatedTooltip";
 import SocialLinks from "./SocialLink";
 import ProjectDescription from "./ProjectDescription";
 import ProjectImage from "./ProjectImage";
-import { useOpenProject } from "@/context/OpenProjectContext";
+import { useOpenProject } from "@/context/OpenProjectContext/useOpenProject";
 import Modal from "./Modal";
+import clsx from "clsx";
+import { useIsProjectsExpanded } from "@/context/IsProjectsExpandedContext/useIsProjectsExpanded";
+import MagicButton from "../ui/MagicButton";
+import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
 const Projects = () => {
+  const { isProjectsExpanded, setIsProjectsExpanded } = useIsProjectsExpanded();
   const { setOpenProjectId } = useOpenProject();
+
+  const displayedProjects = isProjectsExpanded
+    ? projects
+    : projects.slice(0, 4);
 
   return (
     <div id="projects" className="scroll-mt-20">
@@ -18,17 +27,24 @@ const Projects = () => {
 
       <div className="grid grid-cols-1 items-center justify-center gap-4 sm:gap-8 md:grid-cols-2">
         {/* Maping on projects */}
-        {projects.map((project) => (
+        {displayedProjects.map((project, idx) => (
           /* All projects */
           <div
-            key={project.title}
+            key={idx}
             className="rotated-image-container relative flex h-min w-fit flex-col flex-nowrap content-center items-center justify-center rounded-2xl border border-white/[0.1] bg-white/20 decoration-clone p-px transition duration-500 hover:bg-purple"
           >
             {/* Single Project */}
             <div
-              className="flex h-[20rem] gap-2 sm:gap-0 w-auto cursor-pointer flex-col items-center justify-between rounded-[inherit] bg-black-100 p-2 text-white sm:h-[25rem] sm:p-4"
+              className={clsx(
+                "flex h-[20rem] flex-col items-center justify-between gap-2 rounded-[inherit] bg-black-100 p-2 text-white sm:h-[25rem] sm:gap-0 sm:p-4",
+                {
+                  "cursor-pointer": "video" in project,
+                },
+              )}
               onClick={() => {
-                setOpenProjectId(project.id);
+                if ("video" in project) {
+                  setOpenProjectId(project.id);
+                }
               }}
             >
               <ProjectImage image={project.image} title={project.title} />
@@ -38,24 +54,34 @@ const Projects = () => {
               <div className="flex w-full items-center justify-between sm:mt-3">
                 <div className="flex">
                   {project.iconLists.map((items, index) => (
-                    <>
+                    <div key={index} className="flex">
                       {index ? <div className="lg:w-4" /> : null}
                       <AnimatedTooltip items={items} />
-                    </>
+                    </div>
                   ))}
                 </div>
                 <SocialLinks
                   id={project.id}
                   github={project.github}
                   website={"website" in project ? project.website : undefined}
-                  video={project.video}
+                  video={"video" in project ? project.video : undefined}
                 />
               </div>
             </div>
           </div>
         ))}
-        <Modal />
       </div>
+      <div className="mt-8 flex w-full justify-center">
+        <MagicButton
+          title={
+            isProjectsExpanded ? "Show less Projects" : "Show more Projects"
+          }
+          icon={isProjectsExpanded ? <FaArrowUp /> : <FaArrowDown />}
+          position="right"
+          onClick={() => setIsProjectsExpanded((e) => !e)}
+        />
+      </div>
+      <Modal />
     </div>
   );
 };

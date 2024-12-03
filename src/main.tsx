@@ -2,10 +2,11 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
-import ActiveSectionProvider from "./context/ActiveSectionContext.tsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import OpenProjectContextProvider from "./context/OpenProjectContext.tsx";
 import * as Sentry from "@sentry/react";
+import ActiveSectionProvider from "./context/ActiveSectionContext/ActiveSectionProvider.tsx";
+import OpenProjectContextProvider from "./context/OpenProjectContext/OpenProjectProvider.tsx";
+import IsProjectsExpandedContextProvider from "./context/IsProjectsExpandedContext/IsProjectsExpandedProvider.tsx";
 
 Sentry.init({
   dsn: "https://933f970a055d21d706b4de342ce713bc@o4508360462761984.ingest.de.sentry.io/4508382357356624",
@@ -34,11 +35,13 @@ createRoot(document.getElementById("root")!).render(
         <Route
           path="*"
           element={
-            <ActiveSectionProvider>
-              <OpenProjectContextProvider>
-                <App />
-              </OpenProjectContextProvider>
-            </ActiveSectionProvider>
+            <IsProjectsExpandedContextProvider>
+              <ActiveSectionProvider>
+                <OpenProjectContextProvider>
+                  <App />
+                </OpenProjectContextProvider>
+              </ActiveSectionProvider>
+            </IsProjectsExpandedContextProvider>
           }
         ></Route>
       </Routes>
