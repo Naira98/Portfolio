@@ -17,8 +17,7 @@ const MagicButton = ({
   return (
     <motion.button
       whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.95, rotate: "0.5deg" }}
-
+      whileTap={{ scale: 0.95, rotate: "1.5deg" }}
       onClick={onClick}
       className={`relative inline-flex h-12 w-60 overflow-hidden rounded-lg p-[1px] ${otherClasses}`}
     >

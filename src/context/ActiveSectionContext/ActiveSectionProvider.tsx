@@ -101,8 +101,11 @@ const ActiveSectionProvider = ({ children }: ActiveSectionProviderProps) => {
 
     window.addEventListener("resize", onResize, { passive: true });
     window.addEventListener("scroll", onScroll, { passive: true });
-
+    
     onResize();
+
+    /* Time of open more projects animation */
+    setTimeout(()=>{onResize()}, 700)
 
     return () => {
       window.removeEventListener("resize", onResize);

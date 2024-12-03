@@ -190,7 +190,11 @@ export const projects = [
     video: "worldwise",
     logo: "worldwise",
     github: "https://github.com/Naira98/worldWise",
-  },{
+  },
+] as const;
+
+export const moreProjects = [
+  {
     id: 4,
     title: "Fast React Pizza",
     des: "Pizza restaurant storefront with streamlined online ordering experience, priority management and tracking orders.",
@@ -218,7 +222,7 @@ export const projects = [
     image: "fastreactpizza",
     video: "fastreactpizza",
     logo: "fastreactpizza",
-    website: 'https://fast-react-pizza-web.vercel.app/',
+    website: "https://fast-react-pizza-web.vercel.app/",
     github: "https://github.com/Naira98/FastReactPizza",
   },
   {
@@ -350,6 +354,9 @@ export const skills = [
   { name: "HTML", img: "html" },
   { name: "CSS", img: "css" },
   { name: "Git", img: "git" },
+  
+  { name: "Frmer Motion", img: "framermotion" },
+  { name: "Figma", img: "figma" },
 
   { name: "Docker", img: "docker" },
   { name: "Zod", img: "zod" },

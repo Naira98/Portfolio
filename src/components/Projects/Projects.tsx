@@ -1,22 +1,13 @@
-import { projects } from "@/data/index";
-import { AnimatedTooltip } from "./AnimatedTooltip";
-import SocialLinks from "./SocialLink";
-import ProjectDescription from "./ProjectDescription";
-import ProjectImage from "./ProjectImage";
-import { useOpenProject } from "@/context/OpenProjectContext/useOpenProject";
-import Modal from "./Modal";
-import clsx from "clsx";
 import { useIsProjectsExpanded } from "@/context/IsProjectsExpandedContext/useIsProjectsExpanded";
-import MagicButton from "../ui/MagicButton";
+import { moreProjects, projects } from "@/data/index";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa";
+import MagicButton from "../ui/MagicButton";
+import Modal from "./Modal";
+import SingleProject from "./SingleProject";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Projects = () => {
   const { isProjectsExpanded, setIsProjectsExpanded } = useIsProjectsExpanded();
-  const { setOpenProjectId } = useOpenProject();
-
-  const displayedProjects = isProjectsExpanded
-    ? projects
-    : projects.slice(0, 4);
 
   return (
     <div id="projects" className="scroll-mt-20">
@@ -25,51 +16,33 @@ const Projects = () => {
         <span className="text-purple">Recent Projects</span>
       </h1>
 
-      <div className="grid grid-cols-1 items-center justify-center gap-4 sm:gap-8 md:grid-cols-2">
-        {/* Maping on projects */}
-        {displayedProjects.map((project, idx) => (
-          /* All projects */
-          <div
-            key={idx}
-            className="rotated-image-container relative flex h-min w-fit flex-col flex-nowrap content-center items-center justify-center rounded-2xl border border-white/[0.1] bg-white/20 decoration-clone p-px transition duration-500 hover:bg-purple"
-          >
-            {/* Single Project */}
-            <div
-              className={clsx(
-                "flex h-[20rem] flex-col items-center justify-between gap-2 rounded-[inherit] bg-black-100 p-2 text-white sm:h-[25rem] sm:gap-0 sm:p-4",
-                {
-                  "cursor-pointer": "video" in project,
-                },
-              )}
-              onClick={() => {
-                if ("video" in project) {
-                  setOpenProjectId(project.id);
-                }
-              }}
+      {/* Static Projects */}
+      <div className="flex flex-col items-center justify-center gap-4 sm:gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 items-center justify-center gap-4 sm:gap-8 md:grid-cols-2">
+          {projects.map((project, idx) => (
+            <SingleProject project={project} idx={idx} key={idx} />
+          ))}
+        </div>
+
+        {/* Animated Projects */}
+        <AnimatePresence mode="sync">
+          {isProjectsExpanded && (
+            <motion.div
+              className="grid grid-cols-1 items-center justify-center gap-4 sm:gap-8 md:grid-cols-2"
+              style={{ overflow: "hidden" }}
+              initial={{ height: 0 }}
+              animate={{ height: "auto" }}
+              exit={{ height: 0 }}
+              transition={{ duration: 0.7, type: "spring" }}
             >
-              <ProjectImage image={project.image} title={project.title} />
-
-              <ProjectDescription title={project.title} des={project.des} />
-
-              <div className="flex w-full items-center justify-between sm:mt-3">
-                <div className="flex">
-                  {project.iconLists.map((items, index) => (
-                    <div key={index} className="flex">
-                      {index ? <div className="lg:w-4" /> : null}
-                      <AnimatedTooltip items={items} />
-                    </div>
-                  ))}
+              {moreProjects.map((project, idx) => (
+                <div key={idx}>
+                  <SingleProject project={project} idx={idx} />
                 </div>
-                <SocialLinks
-                  id={project.id}
-                  github={project.github}
-                  website={"website" in project ? project.website : undefined}
-                  video={"video" in project ? project.video : undefined}
-                />
-              </div>
-            </div>
-          </div>
-        ))}
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
       <div className="mt-8 flex w-full justify-center">
         <MagicButton
@@ -81,6 +54,7 @@ const Projects = () => {
           onClick={() => setIsProjectsExpanded((e) => !e)}
         />
       </div>
+
       <Modal />
     </div>
   );
