@@ -1,17 +1,18 @@
 import { motion } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
 import ProjectDescription from "./ProjectDescription";
-import { projects } from "@/data";
+import { moreProjects, projects } from "@/data";
 import { useOpenProject } from "@/context/OpenProjectContext/useOpenProject";
 import * as projectAssets from "@/assets/projects";
 
 const Modal = () => {
   const { openProjectId, setOpenProjectId } = useOpenProject();
+  const allProjects = [...projects, ...moreProjects]
 
   if (openProjectId == null) return;
-  const { title, des, logo } = projects[openProjectId];
+  const { title, des, logo } = allProjects[openProjectId];
   const video =
-    "video" in projects[openProjectId] ? projects[openProjectId].video : "";
+    "video" in allProjects[openProjectId] ? allProjects[openProjectId].video : "";
 
   const backgroundVariants = {
     hidden: {
