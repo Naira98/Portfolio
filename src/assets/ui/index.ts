@@ -1,4 +1,5 @@
 export { default as aboutGrid } from "./aboutGrid.svg";
+export { default as copyMailGradinet } from "./copyMailGradinet.webp";
 export { default as footerGrid } from "./footerGrid.svg";
 export { default as github } from "./github.svg";
 export { default as gmail } from "./gmail.svg";

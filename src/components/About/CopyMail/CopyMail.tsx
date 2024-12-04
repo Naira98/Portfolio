@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { BackgroundGradientAnimation } from "../BackgroundGradientAnimation";
 import GridItem from "../GridItem";
 import Lottie from "lottie-react";
 import animationData from "@/data/confetti.json";
 import MagicButton from "@/components/ui/MagicButton";
 import { FaCheck } from "react-icons/fa";
 import { IoCopyOutline } from "react-icons/io5";
+import * as uiAssets from "@/assets/ui";
 
 const CopyMail = () => {
   const [copied, setCopied] = useState(false);
@@ -23,7 +23,12 @@ const CopyMail = () => {
   return (
     <GridItem className="flex items-center justify-center md:col-span-3 md:row-span-1 lg:col-span-2">
       <div className="flex h-full items-center justify-center">
-        <BackgroundGradientAnimation />
+        <img
+          src={uiAssets.copyMailGradinet}
+          alt="gradient-bg"
+          className="absolute w-full"
+        />
+
         <div className="relative flex min-h-40 w-full flex-col items-center justify-center text-balance p-5 text-center md:h-full md:max-w-full lg:p-10">
           <div className="font-sans text-lg font-bold lg:text-xl">
             Do you want to start a project together?

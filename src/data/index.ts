@@ -353,10 +353,10 @@ export const skills = [
 
   { name: "HTML", img: "html" },
   { name: "CSS", img: "css" },
-  { name: "Git", img: "git" },
   
   { name: "Frmer Motion", img: "framermotion" },
   { name: "Figma", img: "figma" },
+  { name: "Git", img: "git" },
 
   { name: "Docker", img: "docker" },
   { name: "Zod", img: "zod" },
