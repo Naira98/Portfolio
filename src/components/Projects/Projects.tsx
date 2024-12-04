@@ -6,6 +6,20 @@ import Modal from "./Modal";
 import SingleProject from "./SingleProject";
 import { AnimatePresence, motion } from "framer-motion";
 
+const AnimatedProjectsVariants = {
+  hidden: {
+    height: 0,
+  },
+  visible: {
+    height: "auto",
+    transition: { type: "tween", duration: 0.7 },
+  },
+  exit: {
+    height: 0,
+    transition: { type: "tween", duration: 0.7 },
+  },
+};
+
 const Projects = () => {
   const { isProjectsExpanded, setIsProjectsExpanded } = useIsProjectsExpanded();
 
@@ -17,34 +31,32 @@ const Projects = () => {
       </h1>
 
       {/* Static Projects */}
-      <div className="flex flex-col items-center justify-center gap-4 sm:gap-8 md:grid-cols-2">
-        <div className="grid grid-cols-1 items-center justify-center gap-4 sm:gap-8 md:grid-cols-2">
-          {projects.map((project, idx) => (
-            <SingleProject project={project} idx={idx} key={idx} />
-          ))}
-        </div>
-
-        {/* Animated Projects */}
-        <AnimatePresence mode="sync">
-          {isProjectsExpanded && (
-            <motion.div
-              className="grid grid-cols-1 items-center justify-center gap-4 sm:gap-8 md:grid-cols-2"
-              style={{ overflow: "hidden" }}
-              initial={{ height: 0 }}
-              animate={{ height: "auto" }}
-              exit={{ height: 0 }}
-              transition={{ duration: 0.7, type: "spring" }}
-            >
-              {moreProjects.map((project, idx) => (
-                <div key={idx}>
-                  <SingleProject project={project} idx={idx} />
-                </div>
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
+      <div className="mb-4 grid grid-cols-1 items-center justify-center gap-4 sm:mb-8 sm:gap-8 md:grid-cols-2">
+        {projects.map((project, idx) => (
+          <SingleProject project={project} idx={idx} key={idx} />
+        ))}
       </div>
-      <div className="mt-8 flex w-full justify-center">
+
+      {/* Animated Projects */}
+      <AnimatePresence>
+        {isProjectsExpanded && (
+          <motion.div
+            className="mb-4 grid grid-cols-1 items-center justify-center gap-4 sm:mb-8 sm:gap-8 md:grid-cols-2"
+            style={{ overflow: "hidden" }}
+            variants={AnimatedProjectsVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            {moreProjects.map((project, idx) => (
+              <div key={idx}>
+                <SingleProject project={project} idx={idx} />
+              </div>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <div className="flex w-full justify-center">
         <MagicButton
           title={
             isProjectsExpanded ? "Show less Projects" : "Show more Projects"
