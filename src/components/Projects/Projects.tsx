@@ -12,11 +12,11 @@ const AnimatedProjectsVariants = {
   },
   visible: {
     height: "auto",
-    transition: { type: "tween", duration: 0.7 },
+    transition: { type: "spring", duration: 0.7 },
   },
   exit: {
     height: 0,
-    transition: { type: "tween", duration: 0.7 },
+    transition: { type: "tween", duration: 0.5 },
   },
 };
 
@@ -31,7 +31,7 @@ const Projects = () => {
       </h1>
 
       {/* Static Projects */}
-      <div className="mb-4 grid grid-cols-1 items-center justify-center gap-4 sm:mb-8 sm:gap-8 md:grid-cols-2">
+      <div className="mb-4 grid grid-cols-1 gap-4 sm:mb-8 sm:gap-8 md:grid-cols-2">
         {projects.map((project, idx) => (
           <SingleProject project={project} idx={idx} key={idx} />
         ))}
@@ -41,7 +41,7 @@ const Projects = () => {
       <AnimatePresence>
         {isProjectsExpanded && (
           <motion.div
-            className="mb-4 grid grid-cols-1 items-center justify-center gap-4 sm:mb-8 sm:gap-8 md:grid-cols-2"
+            className="mb-4 grid grid-cols-1 gap-4 sm:mb-8 sm:gap-8 md:grid-cols-2"
             style={{ overflow: "hidden" }}
             variants={AnimatedProjectsVariants}
             initial="hidden"

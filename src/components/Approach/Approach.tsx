@@ -2,7 +2,7 @@ import { ReactNode, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "./CanvasRevealEffect";
 import MagicButton from "@/components/ui/MagicButton";
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 
 export default function Approach() {
   return (
@@ -63,7 +63,7 @@ export default function Approach() {
           >
             <CanvasRevealEffect
               animationSpeed={3}
-              containerClassName="bg-blackß"
+              containerClassName="bg-black"
               colors={[[125, 211, 252]]}
             />
           </Card>
@@ -92,6 +92,7 @@ const Card = ({
     return window.matchMedia("(any-hover: none)").matches;
   });
   const openWindow = hovered || openCard == id;
+
   return (
     <div
       onMouseEnter={() => {
@@ -122,6 +123,7 @@ const Card = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
             className="absolute inset-0 h-full w-full"
           >
             {children}
@@ -131,28 +133,36 @@ const Card = ({
 
       <div className="relative z-10">
         <div
-          className={clsx(
-            "absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center text-center transition duration-200 group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0",
+          className={cn(
+            "absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center text-center transition duration-200",
             {
               "translate-y-4 opacity-0": openCard == id,
+              "group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0":
+                !touchDevice,
             },
           )}
         >
           {icon}
         </div>
         <h2
-          className={clsx(
-            "relative z-10 mt-4 text-balance text-center text-3xl font-bold text-white opacity-0 transition duration-200 group-hover/canvas-card:-translate-y-2 group-hover/canvas-card:text-white group-hover/canvas-card:opacity-100",
-            { "translate-y-2 text-white opacity-100": openCard == id },
+          className={cn(
+            "relative z-10 text-balance text-center sm:text-3xl text-2xl font-bold text-white opacity-0 transition duration-200",
+            {
+              "translate-y-2 text-white opacity-100": openCard == id,
+              "group-hover/canvas-card:-translate-y-2 group-hover/canvas-card:text-white group-hover/canvas-card:opacity-100":
+                !touchDevice,
+            },
           )}
         >
           {title}
         </h2>
         <h2
-          className={clsx(
-            "relative z-10 mt-4 text-balance text-center text-sm font-semibold text-white opacity-0 transition duration-200 group-hover/canvas-card:-translate-y-2 group-hover/canvas-card:text-white group-hover/canvas-card:opacity-100",
+          className={cn(
+            "relative z-10 mt-4 text-balance text-center text-sm  sm:font-semibold font-normal text-white opacity-0 transition duration-200",
             {
               "translate-y-2 text-white opacity-100": openCard == id,
+              "group-hover/canvas-card:-translate-y-2 group-hover/canvas-card:text-white group-hover/canvas-card:opacity-100":
+                !touchDevice,
             },
           )}
         >

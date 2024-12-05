@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import clsx from "clsx";
 import { navItems } from "../../data";
 import { useActiveSection } from "@/context/ActiveSectionContext/useActiveSection";
+import { cn } from "@/lib/utils";
 
 export const SquigglyUnderline = ({
   sideNav = false,
@@ -10,7 +10,7 @@ export const SquigglyUnderline = ({
 }) => {
   const { activeSection, scrollTo } = useActiveSection();
   return (
-    <div className={clsx("flex gap-8 lg:gap-16", { "flex-col": sideNav })}>
+    <div className={cn("flex gap-8 lg:gap-16", { "flex-col": sideNav })}>
       {navItems.map((item) => {
         const isSelected = item.name === activeSection;
         return (

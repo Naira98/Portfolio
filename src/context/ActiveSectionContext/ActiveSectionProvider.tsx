@@ -105,7 +105,7 @@ const ActiveSectionProvider = ({ children }: ActiveSectionProviderProps) => {
     onResize();
 
     /* Time of open more projects animation */
-    setTimeout(()=>{onResize()}, 700)
+    setTimeout(()=>{onResize()}, 500)
 
     return () => {
       window.removeEventListener("resize", onResize);

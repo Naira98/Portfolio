@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import clsx from "clsx";
 import HamburgerButton from "./HamburgerButton";
 import { SquigglyUnderline } from "./SquigglyUnderline";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <nav
       ref={ref}
-      className={clsx(
+      className={cn(
         "fixed flex h-20 w-full transform items-center justify-between bg-gradient-to-b from-black-100 to-transparent px-4 duration-500 md:px-14",
         {
           "from-black from-70% opacity-90": isScrolled,

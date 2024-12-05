@@ -1,10 +1,10 @@
-import clsx from "clsx";
 import ProjectImage from "./ProjectImage";
 import ProjectDescription from "./ProjectDescription";
 import { AnimatedTooltip } from "./AnimatedTooltip";
 import SocialLinks from "./SocialLink";
 import { useOpenProject } from "@/context/OpenProjectContext/useOpenProject";
 import { ProjectsArrayType } from "@/data/types";
+import { cn } from "@/lib/utils";
 
 type SingleProjectPropsType = {
   project: ProjectsArrayType[number];
@@ -17,11 +17,11 @@ const SingleProject = ({ project, idx }: SingleProjectPropsType) => {
   return (
     <div
       key={idx}
-      className="rotated-image-container relative flex h-min w-fit flex-col flex-nowrap content-center items-center justify-center rounded-2xl border border-white/[0.1] bg-white/20 decoration-clone p-px transition duration-500 hover:bg-purple"
+      className="w-full rotated-image-container relative flex h-min flex-col flex-nowrap content-center items-center justify-center rounded-2xl border border-white/[0.1] bg-white/20 decoration-clone p-px transition duration-500 hover:bg-purple"
     >
       <div
-        className={clsx(
-          "flex h-[20rem] flex-col items-center justify-between gap-2 rounded-[inherit] bg-black-100 p-2 text-white sm:h-[25rem] sm:gap-0 sm:p-4",
+        className={cn(
+          "flex h-[20rem] w-full flex-col items-start justify-between gap-2 rounded-[inherit] bg-black-100 p-2 text-white sm:h-[25rem] sm:gap-0 sm:p-4",
           {
             "cursor-pointer": "video" in project,
           },
