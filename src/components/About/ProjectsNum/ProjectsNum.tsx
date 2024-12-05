@@ -21,7 +21,7 @@ const ProjectsNum = () => {
       </div>
       <div className="relative flex min-h-40 flex-col items-center justify-start text-balance p-5 transition duration-200 group-hover/bento:translate-x-2 lg:p-10">
         <div className="font-sans text-lg font-bold max-md:max-w-96 lg:text-xl">
-          Over 20 Projects Completed in Just 1 Year
+          +20 Projects Completed in Just 1 Year
         </div>
       </div>
     </GridItem>

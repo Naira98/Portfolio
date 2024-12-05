@@ -1,5 +1,6 @@
+import Lottie from "lottie-react";
 import GridItem from "../GridItem";
-import { GridGlobe } from "./GridGlobe";
+import animationData from "@/data/globe.json";
 
 const TimezoneFlexible = () => {
   return (
@@ -8,7 +9,11 @@ const TimezoneFlexible = () => {
         <div className="z-10 text-start font-sans text-lg font-bold lg:text-center lg:text-xl">
           I&apos;m very flexible with time zone communications
         </div>
-        <GridGlobe />
+        <Lottie
+          loop={true}
+          animationData={animationData}
+          className="absolute inset-0 -top-28 h-[400px]"
+        />
       </div>
     </GridItem>
   );
