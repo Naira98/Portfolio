@@ -15,6 +15,7 @@ const VideoIcon = ({ children, title, projectId }: VideoIconPropsType) => {
       <button
         onClick={() => setOpenProjectId(projectId)}
         className="text-white hover:text-purple"
+        aria-label={title}
       >
         {children}
       </button>

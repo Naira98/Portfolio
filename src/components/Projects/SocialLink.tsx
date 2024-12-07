@@ -44,7 +44,7 @@ const LinkIcon = ({
 }) => {
   return (
     <span className="tooltip relative" onClick={(e) => e.stopPropagation()}>
-      <a href={href} target="_blank" className="text-white hover:text-purple">
+      <a href={href} aria-label={title} target="_blank" className="text-white hover:text-purple">
         {children}
       </a>
       <div className="tooltip-text absolute bottom-[130%] z-20 w-fit rounded-2xl border border-white/20 bg-black px-3 py-1 text-sm font-bold text-white">

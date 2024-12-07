@@ -6,6 +6,6 @@ export { default as gmail } from "./gmail.svg";
 export { default as gradientBg } from "./gradientBg.png";
 export { default as import } from "./import.svg";
 export { default as linkedin } from "./linkedin.svg";
-export { default as macbook } from "./macbook.svg";
+export { default as macbook } from "./macbook.png";
 export { default as whatsapp } from "./whatsapp.svg";
 export { default as window } from "./window.svg";

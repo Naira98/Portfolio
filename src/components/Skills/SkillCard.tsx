@@ -16,7 +16,7 @@ const SkillCard = ({ img, name }: SkillCardPropsType) => {
           className="absolute h-14 w-14 object-contain"
         />
       </div>
-      <h3 className="text-center">{name}</h3>
+      <div className="text-center">{name}</div>
     </div>
   );
 };

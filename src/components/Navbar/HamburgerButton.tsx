@@ -6,7 +6,7 @@ const HamburgerButton = () => {
   const [active, setActive] = useState(false);
   return (
     <>
-      <div className="relative z-10 sm:scale-90 scale-[80%]">
+      <div className="relative z-10 scale-[80%] sm:scale-90">
         <MotionConfig
           transition={{
             duration: 0.5,
@@ -14,6 +14,7 @@ const HamburgerButton = () => {
           }}
         >
           <motion.button
+            aria-label="HamburgerButton"
             initial={false}
             animate={active ? "open" : "closed"}
             onClick={() => setActive((pv) => !pv)}

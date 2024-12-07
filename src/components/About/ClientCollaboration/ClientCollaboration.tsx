@@ -1,5 +1,5 @@
 import GridItem from "../GridItem";
-import macbook from "@/assets/ui/macbook.svg";
+import { macbook } from "@/assets/ui";
 
 const ClientCollaboration = () => {
   return (
