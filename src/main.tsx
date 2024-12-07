@@ -8,7 +8,7 @@ import ActiveSectionProvider from "./context/ActiveSectionContext/ActiveSectionP
 import OpenProjectContextProvider from "./context/OpenProjectContext/OpenProjectProvider.tsx";
 import IsProjectsExpandedContextProvider from "./context/IsProjectsExpandedContext/IsProjectsExpandedProvider.tsx";
 import { HelmetProvider } from "react-helmet-async";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 Sentry.init({
   dsn: "https://933f970a055d21d706b4de342ce713bc@o4508360462761984.ingest.de.sentry.io/4508382357356624",
