@@ -5,6 +5,8 @@ import MagicButton from "../ui/MagicButton";
 import Modal from "./Modal";
 import SingleProject from "./SingleProject";
 import { AnimatePresence, motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+import * as projectsAssets from "@/assets/projects";
 
 const AnimatedProjectsVariants = {
   hidden: {
@@ -36,6 +38,12 @@ const Projects = () => {
           <SingleProject project={project} idx={idx} key={idx} />
         ))}
       </div>
+
+      <Helmet>
+        {moreProjects.map(({ image }) => (
+          <link key={image} rel="preload" as="image" href={projectsAssets[image].image} />
+        ))}
+      </Helmet>
 
       {/* Animated Projects */}
       <AnimatePresence>

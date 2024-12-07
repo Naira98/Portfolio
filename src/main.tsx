@@ -7,6 +7,7 @@ import * as Sentry from "@sentry/react";
 import ActiveSectionProvider from "./context/ActiveSectionContext/ActiveSectionProvider.tsx";
 import OpenProjectContextProvider from "./context/OpenProjectContext/OpenProjectProvider.tsx";
 import IsProjectsExpandedContextProvider from "./context/IsProjectsExpandedContext/IsProjectsExpandedProvider.tsx";
+import { HelmetProvider } from "react-helmet-async";
 
 Sentry.init({
   dsn: "https://933f970a055d21d706b4de342ce713bc@o4508360462761984.ingest.de.sentry.io/4508382357356624",
@@ -38,7 +39,9 @@ createRoot(document.getElementById("root")!).render(
             <IsProjectsExpandedContextProvider>
               <ActiveSectionProvider>
                 <OpenProjectContextProvider>
-                  <App />
+                  <HelmetProvider>
+                    <App />
+                  </HelmetProvider>
                 </OpenProjectContextProvider>
               </ActiveSectionProvider>
             </IsProjectsExpandedContextProvider>
