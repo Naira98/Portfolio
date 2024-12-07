@@ -1,2 +1,2 @@
-export { default as image } from "./image.png";
-export { default as logo } from "./logo.png";
+export { default as image } from "./image.webp";
+export { default as logo } from "./logo.webp";

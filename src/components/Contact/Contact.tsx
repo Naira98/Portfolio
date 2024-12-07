@@ -1,5 +1,5 @@
 import { FaLocationArrow } from "react-icons/fa";
-import footerGrid from "../../assets/ui/footerGrid.svg";
+import { footerGrid } from "../../assets/ui";
 import MagicButton from "../ui/MagicButton";
 import { socialMedia } from "@/data";
 import * as uiAssets from "@/assets/ui";

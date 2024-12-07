@@ -1,4 +1,4 @@
-import gradientBg from "@/assets/ui/gradientBg.png";
+import { gradientBg } from "@/assets/ui";
 import * as projectAssets from "@/assets/projects";
 import { ProjectsArrayType } from "@/data/types";
 
@@ -9,7 +9,7 @@ interface ProjectImagePropsType {
 
 const ProjectImage = ({ image, title }: ProjectImagePropsType) => {
   return (
-    <div className="relative md:mb-5 mb-2 flex w-full items-center justify-center overflow-hidden">
+    <div className="relative mb-2 flex w-full items-center justify-center overflow-hidden md:mb-5">
       {/* Background image div */}
       <div className="relative h-full w-full overflow-hidden rounded-2xl">
         <img src={gradientBg} alt="bg-image" />

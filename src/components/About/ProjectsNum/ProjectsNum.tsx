@@ -1,6 +1,6 @@
 import GridItem from "../GridItem";
-import importImg from "@/assets/ui/import.svg";
-import aboutGrid from "@/assets/ui/aboutGrid.svg";
+import { import as importImg } from "@/assets/ui";
+import { aboutGrid } from "@/assets/ui";
 
 const ProjectsNum = () => {
   return (

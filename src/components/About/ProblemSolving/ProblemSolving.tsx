@@ -1,6 +1,6 @@
 import GridItem from "../GridItem";
-import aboutGrid from "@/assets/ui/aboutGrid.svg";
-import windowImg from "@/assets/ui/window.svg";
+import { aboutGrid } from "@/assets/ui";
+import { window as windowImg } from "@/assets/ui";
 
 const ProblemSolving = () => {
   return (
