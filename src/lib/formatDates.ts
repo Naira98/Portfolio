@@ -19,6 +19,5 @@ export function formatDateRange(start: Date, end: Date | null) {
   } else {
     range = `${months}m`;
   }
-
   return { startDate, endDate, range };
 }

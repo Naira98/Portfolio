@@ -1,7 +1,7 @@
 import { ExperiencesType } from "@/data/types";
 import { formatDateRange } from "@/lib/formatDates";
 
-const ExperiencesCard = ({
+const ExperienceCard = ({
   experience,
 }: {
   experience: ExperiencesType[number];
@@ -29,10 +29,8 @@ const ExperiencesCard = ({
           </li>
         ))}
       </ul>
-
-      {/* <div className="text-center">{name}</div> */}
     </div>
   );
 };
 
-export default ExperiencesCard;
+export default ExperienceCard;

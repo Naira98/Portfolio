@@ -1,5 +1,5 @@
 import { experiences } from "@/data";
-import ExperiencesCard from "./ExperiencesCard";
+import ExperienceCard from "./ExperienceCard";
 
 const Experiences = () => {
   return (
@@ -9,7 +9,7 @@ const Experiences = () => {
       </h1>
       <div className="flex justify-center">
         {experiences.map((experience) => (
-          <ExperiencesCard key={experience.company} experience={experience} />
+          <ExperienceCard key={experience.company} experience={experience} />
         ))}
       </div>
     </div>

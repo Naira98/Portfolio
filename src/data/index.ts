@@ -342,7 +342,7 @@ export const experiences: ExperiencesType = [
   {
     title: "Full Stack Developer",
     company: "Blucell",
-    startDate: new Date("May 2024"),
+    startDate: new Date("1 May 2024"),
     endDate: null,
     employmentType: "Full Time",
     location: "Dubai",
