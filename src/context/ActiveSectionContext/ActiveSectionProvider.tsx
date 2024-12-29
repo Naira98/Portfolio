@@ -10,6 +10,7 @@ const sections = [
   "Home",
   "About",
   "Projects",
+  "Experiences",
   "Skills",
   "Approach",
   "Contact",
@@ -21,6 +22,7 @@ const ActiveSectionProvider = ({ children }: ActiveSectionProviderProps) => {
   const homeRef = useRef<HTMLDivElement | null>(null);
   const aboutRef = useRef<HTMLDivElement | null>(null);
   const projectsRef = useRef<HTMLDivElement | null>(null);
+  const experiencesRef = useRef<HTMLDivElement | null>(null);
   const skillsRef = useRef<HTMLDivElement | null>(null);
   const approachRef = useRef<HTMLDivElement | null>(null);
   const contactRef = useRef<HTMLDivElement | null>(null);
@@ -28,7 +30,15 @@ const ActiveSectionProvider = ({ children }: ActiveSectionProviderProps) => {
   const threshold = 1 / 3;
 
   const refs = useMemo(
-    () => [homeRef, aboutRef, projectsRef, skillsRef, approachRef, contactRef],
+    () => [
+      homeRef,
+      aboutRef,
+      projectsRef,
+      experiencesRef,
+      skillsRef,
+      approachRef,
+      contactRef,
+    ],
     [],
   );
   const { isProjectsExpanded } = useIsProjectsExpanded();
@@ -101,11 +111,13 @@ const ActiveSectionProvider = ({ children }: ActiveSectionProviderProps) => {
 
     window.addEventListener("resize", onResize, { passive: true });
     window.addEventListener("scroll", onScroll, { passive: true });
-    
+
     onResize();
 
     /* Time of open more projects animation */
-    setTimeout(()=>{onResize()}, 500)
+    setTimeout(() => {
+      onResize();
+    }, 500);
 
     return () => {
       window.removeEventListener("resize", onResize);
@@ -126,6 +138,7 @@ const ActiveSectionProvider = ({ children }: ActiveSectionProviderProps) => {
           Home: homeRef,
           About: aboutRef,
           Projects: projectsRef,
+          Experiences: experiencesRef,
           Skills: skillsRef,
           Approach: approachRef,
           Contact: contactRef,

@@ -1,6 +1,7 @@
 import About from "./components/About/About";
 import Approach from "./components/Approach/Approach";
 import Contact from "./components/Contact/Contact";
+import Experiences from "./components/Experiences/Experiences";
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Projects from "./components/Projects/Projects";
@@ -13,6 +14,7 @@ const App = () => {
       Home: homeRef,
       About: aboutRef,
       Projects: projectsRef,
+      Experiences: experiencesRef,
       Skills: skillsRef,
       Approach: approachRef,
       Contact: contactRef,
@@ -33,6 +35,8 @@ const App = () => {
         <About />
         <div ref={projectsRef} />
         <Projects />
+        <div ref={experiencesRef} />
+        <Experiences />
         <div ref={skillsRef} />
         <Skills />
         <div ref={approachRef} />

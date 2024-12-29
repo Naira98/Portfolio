@@ -1,7 +1,10 @@
+import { ExperiencesType } from "./types";
+
 export const navItems = [
   { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
+  { name: "Experiences", link: "#experiences" },
   { name: "Skills", link: "#skills" },
   { name: "Approach", link: "#approach" },
   { name: "Contact", link: "#contact" },
@@ -335,6 +338,22 @@ export const moreProjects = [
   },
 ] as const;
 
+export const experiences: ExperiencesType = [
+  {
+    title: "Full Stack Developer",
+    company: "Blucell",
+    startDate: new Date("May 2024"),
+    endDate: null,
+    employmentType: "Full Time",
+    location: "Dubai",
+    locationType: "Remote",
+    description: [
+      "Specializing in developing outsource projects for clients across various industries.",
+      "Tech used: Node.js, Express, MongoDB, React, and Next.js.",
+    ],
+  },
+] as const;
+
 export const skills = [
   { name: "TypeScript", img: "typescript" },
 
@@ -353,7 +372,7 @@ export const skills = [
 
   { name: "HTML", img: "html" },
   { name: "CSS", img: "css" },
-  
+
   { name: "Frmer Motion", img: "framermotion" },
   { name: "Figma", img: "figma" },
   { name: "Git", img: "git" },

@@ -10,7 +10,7 @@ export const SquigglyUnderline = ({
 }) => {
   const { activeSection, scrollTo } = useActiveSection();
   return (
-    <div className={cn("flex gap-8 lg:gap-16", { "flex-col": sideNav })}>
+    <div className={cn("flex gap-8 lg:gap-10", { "flex-col": sideNav })}>
       {navItems.map((item) => {
         const isSelected = item.name === activeSection;
         return (
@@ -18,7 +18,7 @@ export const SquigglyUnderline = ({
             key={item.name}
             href={item.link}
             className={`relative text-sm leading-6 no-underline ${
-              isSelected ? "font-semibold text-white" : "text-gray-500"
+              isSelected ? "font-semibold text-white" : "text-gray-400"
             }`}
             onClick={() => scrollTo(item.name)}
           >
