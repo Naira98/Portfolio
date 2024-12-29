@@ -15,7 +15,7 @@ export default function Approach() {
         <div className="mx-auto grid w-full cursor-default grid-cols-1 items-center justify-center gap-6 bg-black-100 p-3 md:grid-cols-3 md:p-8">
           <Card
             title="Planning & Strategy"
-            des="I carefully understand the website's goals, audience, structure, and content needs to create a clear development roadmap."
+            des="I carefully understand the website's goals, audience, structure, and content needed to create a clear development roadmap."
             icon={
               <MagicButton
                 title="Phase 1"
