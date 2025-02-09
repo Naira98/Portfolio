@@ -349,7 +349,7 @@ export const experiences: ExperiencesType = [
     locationType: "Remote",
     description: [
       "Specializing in developing outsource projects for clients across various industries.",
-      "Tech used: Node.js, Express, MongoDB, React, and Next.js.",
+      "Tech used: Node.js, Express, MongoDB and React.",
     ],
   },
 ] as const;

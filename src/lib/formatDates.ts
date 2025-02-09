@@ -9,7 +9,7 @@ function formatDate(date: Date) {
 export function formatDateRange(start: Date, end: Date | null) {
   const startDate = formatDate(start);
   const endDate = end ? formatDate(end) : "Present";
-  let months = differenceInMonths(end || Date.now(), start);
+  let months = differenceInMonths(end || Date.now(), start) + 1; // add current month
   let range: string;
 
   if (months >= 12) {
