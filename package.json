@@ -14,7 +14,7 @@
     "@sentry/react": "^8.41.0",
     "@sentry/vite-plugin": "^2.22.6",
     "@types/node": "^22.9.3",
-    "@vercel/speed-insights": "^1.1.0",
+    "@vercel/speed-insights": "^1.2.0",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "framer-motion": "^11.11.17",
