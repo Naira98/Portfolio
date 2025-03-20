@@ -4,6 +4,8 @@ import { CanvasRevealEffect } from "./CanvasRevealEffect";
 import MagicButton from "@/components/ui/MagicButton";
 import { cn } from "@/lib/utils";
 
+const touchDevice = window.matchMedia("(any-hover: none)").matches;
+
 export default function Approach() {
   return (
     <div id="approach" className="scroll-mt-20">
@@ -88,9 +90,6 @@ const Card = ({
 }) => {
   const [openCard, setOpenCard] = useState<number | null>(null);
   const [hovered, setHovered] = useState(false);
-  const [touchDevice] = useState<boolean>(() => {
-    return window.matchMedia("(any-hover: none)").matches;
-  });
   const openWindow = hovered || openCard == id;
 
   return (
@@ -146,7 +145,7 @@ const Card = ({
         </div>
         <h2
           className={cn(
-            "relative z-10 text-balance text-center sm:text-3xl text-2xl font-bold text-white opacity-0 transition duration-200",
+            "relative z-10 text-balance text-center text-2xl font-bold text-white opacity-0 transition duration-200 sm:text-3xl",
             {
               "translate-y-2 text-white opacity-100": openCard == id,
               "group-hover/canvas-card:-translate-y-2 group-hover/canvas-card:text-white group-hover/canvas-card:opacity-100":
@@ -158,7 +157,7 @@ const Card = ({
         </h2>
         <h2
           className={cn(
-            "relative z-10 mt-4 text-balance text-center text-sm  sm:font-semibold font-normal text-white opacity-0 transition duration-200",
+            "relative z-10 mt-4 text-balance text-center text-sm font-normal text-white opacity-0 transition duration-200 sm:font-semibold",
             {
               "translate-y-2 text-white opacity-100": openCard == id,
               "group-hover/canvas-card:-translate-y-2 group-hover/canvas-card:text-white group-hover/canvas-card:opacity-100":
